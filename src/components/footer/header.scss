@@ -1,0 +1,91 @@
+.header {
+  background-color: #14181c;
+  display: flex;
+  width: 100%;
+
+  .header__title {
+    color: white;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin-left: 12rem;
+  }
+
+  .header__content {
+    margin-right: 12rem;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+
+    .input-group {
+      flex-wrap: nowrap;
+      display: flex;
+      background-color: rgb(88, 92, 99);
+      width: auto;
+      border-radius: 1rem !important;
+
+      input {
+        background-color: rgb(88, 92, 99);
+        font-family: "Roboto", sans-serif;
+        font-size: 0.8rem;
+        border: none;
+        border-radius: 1rem;
+        height: 1.6rem;
+        width: 7rem;
+        display: flex;
+        padding: 0 0.5rem;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        height: 1.6rem;
+        width: 1rem;
+        color: lightgray;
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        &:hover {
+          background-color: transparent;
+          border-radius: 1rem;
+        }
+      }
+
+      &:hover {
+        background-color: rgb(175, 170, 170);
+
+        input {
+          background-color: rgb(175, 170, 170);
+        }
+
+        button {
+          color: gray;
+        }
+      }
+
+      &:focus-within {
+        background-color: white;
+
+        input {
+          background-color: white;
+        }
+
+        button {
+          color: gray;
+        }
+      }
+    }
+  }
+}

@@ -45,6 +45,7 @@
     "import/prefer-default-export": 0,
     "eqeqeq": 1,
     "react/no-array-index-key": "warn",
-    "no-nested-ternary": 0
+    "no-nested-ternary": 0,
+    "react/self-closing-comp": "warn"
   }
 }
