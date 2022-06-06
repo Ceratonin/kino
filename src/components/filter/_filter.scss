@@ -1,0 +1,37 @@
+@use "../../scss/abstracts/variables" as *;
+
+.filter {
+  padding: 0 2rem;
+  font-family: "Roboto", sans-serif;
+  height: fit-content;
+  width: 100%;
+
+  p {
+    padding-right: 0.4rem;
+  }
+
+  .btn-group {
+    border: 2px solid $gray;
+    border-radius: 0.5rem;
+    height: fit-content;
+
+    button {
+      border: none;
+      background-color: #1a2127;
+      color: $gray;
+    }
+  }
+
+  .filter__sort {
+    margin-left: auto;
+    height: fit-content;
+
+    button {
+      height: fit-content;
+    }
+  }
+
+  .filter__search {
+    margin-left: auto;
+  }
+}

@@ -3,17 +3,22 @@
   display: flex;
   width: 100%;
 
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
   .header__title {
     color: white;
     font-family: "Roboto";
     font-weight: bold;
     font-size: 2rem;
     padding: 0.5rem;
-    margin-left: 12rem;
+    // margin-left: 12rem;
   }
 
   .header__content {
-    margin-right: 12rem;
+    // margin-right: 12rem;
     width: 100%;
     display: flex;
     justify-content: end;

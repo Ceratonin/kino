@@ -1,3 +1,5 @@
+@use "../../scss/abstracts/variables" as *;
+
 .header__buttons {
   gap: 1rem;
   display: flex;
@@ -31,7 +33,7 @@
           font-size: 0.9rem;
 
           .dropdown-item:active {
-            color: #fff;
+            color: white;
             background-color: rgba(255, 255, 255, 0.15);
           }
         }
@@ -55,7 +57,7 @@
 
   button {
     background-color: transparent;
-    color: #9ab;
+    color: $gray;
     font-family: "Roboto";
     font-weight: 500;
     border: none;

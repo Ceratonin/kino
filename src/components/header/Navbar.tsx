@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "bootstrap/dist/js/bootstrap.bundle";
-import "./navbar.scss";
 
 function Navbar() {
   const [logged, setLogged] = useState(false);

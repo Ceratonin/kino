@@ -1,0 +1,35 @@
+
+.wrapper {
+  width: calc(100vw - 100px);
+  height: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 950px;
+}
+
+.App {
+  height: 100%;
+  background-color: #1a2127;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  color: #9ab;
+  padding: 0 !important;
+
+  @media (min-width: 768px) {
+    max-width: 540px !important;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 720px !important;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 950px !important;
+  }
+}
