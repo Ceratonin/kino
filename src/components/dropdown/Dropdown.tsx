@@ -1,5 +1,4 @@
-import React, { Fragment, useState } from "react";
-import { filterValues, sortValues } from "../../constants/dropdownValues";
+import React, { useState } from "react";
 
 interface IDropdown {
   children: string | React.ReactNode;

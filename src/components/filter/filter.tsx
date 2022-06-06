@@ -1,9 +1,7 @@
-import React, { useState } from "react";
 import Dropdown from "../dropdown/Dropdown";
 import { filterValues, sortValues } from "../../constants/dropdownValues";
 
 function Filter() {
-  console.log(filterValues.keys());
   return (
     <div className="container">
       <section className="filter">
