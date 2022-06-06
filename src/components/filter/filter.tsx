@@ -1,25 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import Dropdown from "../dropdown/Dropdown";
+import { filterValues, sortValues } from "../../constants/dropdownValues";
 
-function filter() {
+function Filter() {
+  console.log(filterValues.keys());
   return (
     <div className="container">
       <section className="filter">
         <p>Filter movies:</p>
-        <div className="filter__buttons btn-group">
-          <button type="button">Year</button>
-          <button type="button">Rating</button>
-          <button type="button">Genre</button>
+        <div className="btn-group">
+          {[...filterValues.keys()].map((btn, key) => (
+            <Dropdown key={key} items={filterValues.get(btn)!} saveTitle>
+              {btn}
+            </Dropdown>
+          ))}
         </div>
+
         <section className="filter__sort">
           <p>Sort by:</p>
-          <button type="button">Сортировка</button>
+          <Dropdown items={sortValues} saveTitle>
+            Most Popular First
+          </Dropdown>
         </section>
         <div className="filter__search">
-          <input type="text" placeholder="Find a film" />
+          <input type="text" placeholder="Find a movie" />
         </div>
       </section>
     </div>
   );
 }
 
-export default filter;
+export default Filter;

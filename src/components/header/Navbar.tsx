@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
+import Dropdown from "../dropdown/Dropdown";
+import { headerProfileValues } from "../../constants/dropdownValues";
 import "bootstrap/dist/js/bootstrap.bundle";
 
 function Navbar() {
@@ -18,38 +20,13 @@ function Navbar() {
     </div>
   ) : (
     <div className="header__buttons">
-      <div className="header__profile dropdown">
-        <div
-          className="dropdown-toggle"
-          id="dropdownMenuButton2"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <i className="fa-solid fa-user" />
-          <button type="button">You</button>
-        </div>
-
-        <ul
-          className="dropdown-menu dropdown-menu-dark"
-          aria-labelledby="dropdownMenuButton2"
-        >
-          <li>
-            <span className="dropdown-item">Profile</span>
-          </li>
-          <li>
-            <span className="dropdown-item">My Films</span>
-          </li>
-          <li>
-            <span className="dropdown-item">Diary</span>
-          </li>
-          <li>
-            <span className="dropdown-item">Watchlist</span>
-          </li>
-          <hr />
-          <li>
-            <span className="dropdown-item">Settings</span>
-          </li>
-        </ul>
+      <div className="header__profile">
+        <Dropdown items={headerProfileValues}>
+          <Fragment>
+            <i className="fa-solid fa-user" />
+            <span>You</span>
+          </Fragment>
+        </Dropdown>
       </div>
       <button type="button">Watchlist</button>
       <button type="button">Films</button>
