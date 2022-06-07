@@ -1,6 +1,7 @@
 import React from "react";
 import Filter from "../../components/filter/Filter";
 import Header from "../../components/header/Header";
+import MovieList from "../../components/movieList/MovieList";
 
 function Films() {
   return (
@@ -9,6 +10,7 @@ function Films() {
       <div className="wrapper">
         <div className="container">
           <Filter />
+          <MovieList />
         </div>
       </div>
     </div>

@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
 
-function MovieCard() {
-  return (
-    <div>MovieCard</div>
-  )
+interface IMovieCard {
+  posterUrl: string;
+  title: string;
 }
 
-export default MovieCard
+function MovieCard({ posterUrl, title }: IMovieCard) {
+  return (
+    <div>
+      <img src={`https://image.tmdb.org/t/p/w154${posterUrl}`} alt={title} />
+    </div>
+  );
+}
+
+export default MovieCard;
