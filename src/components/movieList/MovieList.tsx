@@ -1,11 +1,8 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getPopularMovies } from "../../services/getPopularMovies";
+import { IMovieData } from "../../types/movieData";
 import MovieCard from "../movieCard/MovieCard";
 
-interface IMovieData {
-  poster_path: string;
-  title: string;
-}
 
 function MovieList() {
   const [popularMoviesArray, setPopularMoviesArray] = useState([]);
