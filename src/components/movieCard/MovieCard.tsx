@@ -1,4 +1,5 @@
 import React from "react";
+import { BASE_IMAGE_URL } from "../../constants/baseUrl";
 
 interface IMovieCard {
   posterUrl: string;
@@ -8,7 +9,7 @@ interface IMovieCard {
 function MovieCard({ posterUrl, title }: IMovieCard) {
   return (
     <div>
-      <img src={`https://image.tmdb.org/t/p/w154${posterUrl}`} alt={title} />
+      <img src={`${BASE_IMAGE_URL}w154${posterUrl}`} alt={title} />
     </div>
   );
 }
