@@ -1,8 +1,15 @@
+@use "../../scss/abstracts/variables" as *;
+
 .movie-card-wrapper {
   display: flex;
   justify-content: center;
 
   .movie-card-content {
-    // transition: all 0.2s ease-in-out;
+    border-radius: 5px;
+    border: 1px solid $gray;
+
+    img {
+      border-radius: 5px;
+    }
   }
 }

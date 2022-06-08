@@ -7,8 +7,8 @@ function Filter() {
       <section className="filter">
         <p>Filter movies:</p>
         <div className="btn-group">
-          {[...filterValues.keys()].map((btn, key) => (
-            <Dropdown key={key} items={filterValues.get(btn)!} saveTitle>
+          {[...filterValues.keys()].map((btn) => (
+            <Dropdown key={btn} items={filterValues.get(btn)!} saveTitle>
               {btn}
             </Dropdown>
           ))}

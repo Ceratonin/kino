@@ -29,7 +29,7 @@ function Dropdown({ children, saveTitle, items }: IDropdown) {
         aria-labelledby="dropdownMenuButton"
       >
         {items.map((item, key) => (
-          <li key={key}>
+          <li key={item}>
             <button
               type="button"
               className="dropdown-item"
