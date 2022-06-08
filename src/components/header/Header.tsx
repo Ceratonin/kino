@@ -1,8 +1,12 @@
 import Navbar from "./Navbar";
 
-function Header() {
+interface IHeader {
+  movieHeader?: boolean;
+}
+
+const Header = ({ movieHeader }: IHeader) => {
   return (
-    <header className="header">
+    <header className={`header ${movieHeader ? "movie" : ""}`}>
       <div className="container">
         <div className="header__title">KINO</div>
         <div className="header__content">
@@ -26,6 +30,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

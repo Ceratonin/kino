@@ -3,7 +3,7 @@ import Filter from "../../components/filter/Filter";
 import Header from "../../components/header/Header";
 import MovieList from "../../components/movieList/MovieList";
 
-function Films() {
+const Films = () => {
   return (
     <div>
       <Header />
@@ -15,6 +15,6 @@ function Films() {
       </div>
     </div>
   );
-}
+};
 
 export default Films;

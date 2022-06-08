@@ -1,6 +1,10 @@
 .wrapper {
   background-color: #1a2127;
   padding-top: 2rem;
+
+  &.movie {
+    background-color: transparent;
+  }
 }
 
 #root,

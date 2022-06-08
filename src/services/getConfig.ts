@@ -6,7 +6,7 @@ import { BASE_URL } from "../constants/baseUrl";
 // "https://api.themoviedb.org/3/configuration?"
 
 export const getConfig = async () => {
-  const url = "".concat(BASE_URL, "configuration?a");
+  const url = `${BASE_URL}configuration?a`
 
   axios
     .get(url, {

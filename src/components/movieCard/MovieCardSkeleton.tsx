@@ -1,7 +1,6 @@
 import ContentLoader from "react-content-loader";
 
-function MovieCardSkeleton(props: any) {
-  return (
+const MovieCardSkeleton = () => (
     <div className="movie-card-wrapper">
       <ContentLoader
         speed={2}
@@ -15,6 +14,5 @@ function MovieCardSkeleton(props: any) {
       </ContentLoader>
     </div>
   );
-}
 
 export default MovieCardSkeleton;

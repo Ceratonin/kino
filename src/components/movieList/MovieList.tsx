@@ -4,7 +4,7 @@ import { IMovieData } from "../../types/movieData";
 import MovieCard from "../movieCard/MovieCard";
 import MovieCardSkeleton from "../movieCard/MovieCardSkeleton";
 
-function MovieList() {
+const MovieList = () => {
   const [popularMoviesArray, setPopularMoviesArray] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 

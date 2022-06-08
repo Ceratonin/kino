@@ -6,7 +6,7 @@ interface IDropdown {
   items: Array<string | number>;
 }
 
-function Dropdown({ children, saveTitle, items }: IDropdown) {
+const Dropdown = ({ children, saveTitle, items }: IDropdown) => {
   const [title, setTitle] = useState(children);
 
   const handleClick = (key: number) => {

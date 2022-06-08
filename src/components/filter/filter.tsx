@@ -1,7 +1,7 @@
 import Dropdown from "../dropdown/Dropdown";
 import { filterValues, sortValues } from "../../constants/dropdownValues";
 
-function Filter() {
+const Filter = () => {
   return (
     <div className="container">
       <section className="filter">
@@ -26,6 +26,6 @@ function Filter() {
       </section>
     </div>
   );
-}
+};
 
 export default Filter;

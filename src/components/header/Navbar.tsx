@@ -3,7 +3,7 @@ import Dropdown from "../dropdown/Dropdown";
 import { headerProfileValues } from "../../constants/dropdownValues";
 import "bootstrap/dist/js/bootstrap.bundle";
 
-function Navbar() {
+const Navbar = () => {
   const [logged, setLogged] = useState(false);
 
   const handleLogin = () => {
