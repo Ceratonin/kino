@@ -1,5 +1,9 @@
-@use "../components/filter/filter";
 @use "../components/header/header";
-@use "../components/dropdown/dropdown";
 @use "../components/header/navbar";
+
+@use "../components/filter/filter";
+
+@use "../components/dropdown/dropdown";
+
 @use "../components/movieCard/movieCard";
+@use "../components/movieList/movieList"

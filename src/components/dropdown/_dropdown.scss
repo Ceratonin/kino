@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  // user-select: none;
+  user-select: none; // <----- ???
 
   .dropdown-toggle {
     display: flex;
