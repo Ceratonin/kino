@@ -1,17 +1,27 @@
 export interface IMovieData {
-  original_language: string;
-  original_title: string;
-  poster_path: string;
-  video: boolean;
-  vote_average: number;
-  overview: string;
-  release_date: string;
-  vote_count: number;
-  adult: boolean;
-  backdrop_path: string;
   id: number;
-  genre_ids: number[];
+  imdb_id: number;
+
   title: string;
-  popularity: number;
+  original_title: string;
+  overview: string;
+  tagline: string;
+
+  genre_ids: number[];
+  release_date: string;
+  adult: boolean;
+  budget: number;
+  revenue: number;
+  runtime: number;
+
+  poster_path: string;
+  backdrop_path: string;
+  video: boolean;
+
+  original_language: string;
+
   media_type: string;
+  popularity: number;
+  vote_count: number;
+  vote_average: number;
 }

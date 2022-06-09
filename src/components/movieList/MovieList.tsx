@@ -25,6 +25,8 @@ const MovieList = () => {
           : popularMoviesArray.map((movieData: IMovieData) => (
               <MovieCard
                 key={movieData.id}
+                imageSize="w220_and_h330_face"
+                containerSize={{ width: 154, height: 231 }}
                 posterUrl={movieData.poster_path}
                 title={movieData.title}
               />
@@ -32,6 +34,6 @@ const MovieList = () => {
       </div>
     </div>
   );
-}
+};
 
 export default MovieList;
