@@ -1,0 +1,15 @@
+.panel-container {
+  background-color: green;
+  grid-column: 13/17;
+  grid-row: 2/6;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr) repeat(3, 0.5fr);
+
+  span p{
+    font-size: 0.75rem;
+  }
+
+  h4{
+    // font-size: 4%;
+  }
+}

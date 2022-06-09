@@ -2,66 +2,166 @@
   padding-top: 400px;
   padding-bottom: 40px;
 
-  .container {
+  .grid-wrapper {
     position: relative;
     display: flex;
     font-family: "Open Sans";
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+    background-color: aquamarine;
+    height: 100%;
+    width: 100%;
 
     .movie_poster {
-      right: 0;
-      margin-right: 5rem;
-      flex-shrink: 0;
+      background-color: crimson;
+      grid-column: 1/5;
+      grid-row: 1/6;
     }
 
-    .movie_data {
-      .movie_header {
-        width: 100%;
+    .movie_header {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      height: fit-content;
+      
+      margin-left: 1rem;
+      background-color: blue;
+      grid-column: 5/17;
+      grid-row: 1/2;
+
+      .movie_title {
+        line-height: 100%;
+        text-shadow: #000 2px 0 5px;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        font-size: 3rem;
+        margin-bottom: -5px;
+      }
+
+      .movie_release_date {
+        line-height: 100%;
+        font-size: 2rem;
+        align-self: end;
+        margin-bottom: -1px;
+      }
+
+      .movie_shot_by {
         display: flex;
         flex-direction: row;
-        gap: 1rem;
-        height: fit-content;
-        margin-bottom: 3rem;
+        margin-left: 5rem;
+        align-self: end;
 
-        .movie_title {
+        p {
           line-height: 100%;
-          text-shadow: #000 2px 0 5px;
-          font-family: "Roboto", sans-serif;
-          color: white;
-          font-size: 3rem;
-          margin-bottom: -5px;
+
+          align-self: end;
         }
 
-        .movie_release_date {
+        .movie_director {
           line-height: 100%;
-          font-size: 2rem;
-          align-self: end;
-          margin-bottom: -1px;
-        }
 
-        .movie_shot_by {
-          display: flex;
-          flex-direction: row;
-          margin-left: 5rem;
-          align-self: end;
-
-          p {
-            line-height: 100%;
-
-            align-self: end;
-          }
-
-          .movie_director {
-            line-height: 100%;
-
-            margin-left: 1rem;
-            font-size: 1.5rem;
-          }
+          margin-left: 1rem;
+          font-size: 1.5rem;
         }
       }
     }
 
     .movie_overview {
-      // font-family: "Open Sans";
+      background-color: yellow;
+      grid-column: 5/13;
+      grid-row: 2/6;
+      margin: 0 1rem;
     }
+  }
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  background-color: aquamarine;
+  height: 100%;
+  width: 100%;
+  // row-gap: 1rem;
+  // column-gap: 1rem;
+
+  .poster {
+    // background-color: crimson;
+    // grid-column: 1/5;
+    // grid-row: 1/6;
+  }
+
+  .title {
+    // margin-left: 1rem;
+    // background-color: blue;
+    // grid-column: 5/17;
+    // grid-row: 1/2;
+  }
+
+  .overview {
+    // background-color: yellow;
+    // grid-column: 5/13;
+    // grid-row: 2/6;
+    // margin: 0 1rem;
+  }
+
+  .panel {
+    // background-color: green;
+    // grid-column: 13/17;
+    // grid-row: 2/6;
+  }
+
+  .info {
+    background-color: aqua;
+    grid-column: 1/12;
+    grid-row: 6/12;
+    margin-top: 2rem;
+    margin-right: 2rem;
+  }
+
+  .actors {
+    margin-top: 2rem;
+    background-color: pink;
+    grid-column: 12/17;
+    grid-row: 6/12;
+  }
+
+  .video {
+    margin-top: 2rem;
+    background-color: magenta;
+    grid-row: 12/16;
+    grid-column: 1/9;
+    margin-right: 1rem;
+  }
+
+  .photos {
+    margin-top: 2rem;
+    background-color: brown;
+    grid-row: 12/16;
+    grid-column: 9/17;
+    margin-left: 1rem;
+  }
+
+  .reccomend {
+    margin-top: 2rem;
+    background-color: blue;
+    grid-column: 2/16;
+    grid-row: 16/19;
+  }
+
+  .lists {
+    background-color: crimson;
+    margin-top: 2rem;
+    grid-column: 2/16;
+    grid-row: 19/22;
+  }
+
+  .reviews {
+    margin-top: 2rem;
+    background-color: burlywood;
+    background-attachment: fixed;
+    grid-column: 2/16;
+    grid-row: 22/30;
   }
 }
