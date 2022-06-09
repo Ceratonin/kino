@@ -8,12 +8,10 @@ import Backdrop from "./backdrop/Backdrop";
 
 const Movie = () => {
   const [movieData, setMovieData] = useState(movieDataObj);
-  // const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     getMovieData(64690).then((res) => {
       setMovieData(res);
-      // setIsLoaded(true)
     });
   }, []);
 
@@ -50,19 +48,8 @@ const Movie = () => {
 
             <div className="movie_overview">{movieData.overview}</div>
 
-            <UserPanel />
+            <UserPanel movieData={movieData}/>
 
-            {/* <div className="grid-wrapper">
-            <div className="poster">
-              <MovieCard
-                posterUrl={movieData.poster_path}
-                containerSize={{ width: 230, height: 345 }}
-                imageSize="original"
-                title={movieData.original_title}
-                />
-                </div>
-                <div className="title"></div>
-                <div className="overview"></div>
             <div className="panel"></div>
             <div className="info"></div>
             <div className="actors"></div>
@@ -71,7 +58,6 @@ const Movie = () => {
             <div className="reccomend"></div>
             <div className="lists"></div>
             <div className="reviews"></div>
-          </div> */}
           </div>
         </div>
       </div>

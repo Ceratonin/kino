@@ -2,7 +2,6 @@ import { BASE_IMAGE_URL } from "../../../constants/baseUrl";
 import BackdropSkeleton from "./BackdropSkeleton";
 
 interface IBackdropImageUrl {
-  // isLoaded: boolean;
   posterUrl: string;
 }
 

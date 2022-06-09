@@ -9,12 +9,10 @@
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(30, 1fr);
-    background-color: aquamarine;
     height: 100%;
     width: 100%;
 
     .movie_poster {
-      background-color: crimson;
       grid-column: 1/5;
       grid-row: 1/6;
     }
@@ -26,7 +24,6 @@
       height: fit-content;
       
       margin-left: 1rem;
-      background-color: blue;
       grid-column: 5/17;
       grid-row: 1/2;
 
@@ -68,7 +65,6 @@
     }
 
     .movie_overview {
-      background-color: yellow;
       grid-column: 5/13;
       grid-row: 2/6;
       margin: 0 1rem;
@@ -77,12 +73,11 @@
 }
 
 .grid-wrapper {
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(30, 1fr);
-  background-color: aquamarine;
-  height: 100%;
-  width: 100%;
+  // display: grid;
+  // grid-template-columns: repeat(16, 1fr);
+  // grid-template-rows: repeat(30, 1fr);
+  // height: 100%;
+  // width: 100%;
   // row-gap: 1rem;
   // column-gap: 1rem;
 

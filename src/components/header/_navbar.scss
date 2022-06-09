@@ -24,10 +24,10 @@
     color: $gray;
     font-family: "Roboto";
     font-weight: 500;
+    cursor: pointer;
     border: none;
     font-size: 1rem;
     white-space: nowrap;
-    cursor: pointer;
 
     &:hover {
       color: white;

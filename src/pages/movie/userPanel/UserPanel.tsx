@@ -1,31 +1,43 @@
 import React from "react";
+import { IMovieData } from "../../../types/movieData";
 
-const UserPanel = () => {
+interface IUserPanel {
+  movieData: IMovieData;
+}
+
+// eslint-disable-next-line arrow-body-style
+const UserPanel = ({ movieData }: IUserPanel) => {
   return (
     <div className="panel-container">
       <span>
         <p>Original title</p>
-        <h4>ДРАВ</h4>
+        <h4>{movieData.original_title}</h4>
+        <hr />
       </span>
 
       <span>
         <p>Average Rating</p>
-        <h4>ДРАВ</h4>
+        <h4>{movieData.vote_average}</h4>
+        <hr />
       </span>
 
       <span>
         <p>Rate</p>
-        <h4>ДРАВ</h4>
+        <h4>RATE?????????????????????????????</h4>
+        <hr />
       </span>
 
       <span>
         <p>Popularity</p>
-        <h4>ДРАВ</h4>
+        <h4>{movieData.popularity}</h4>
+        <hr />
       </span>
 
-      <p>Add to Watchlist</p>
-      <p>Leave a Comment</p>
-      <p>Log this Film</p>
+      <div className="button-group">
+        <i className="fa-solid fa-bookmark" />
+        <button type="button">Log</button>
+        <i className="fa-regular fa-comment-dots" />
+      </div>
     </div>
   );
 };
