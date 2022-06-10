@@ -5,6 +5,7 @@ import UserPanel from "./userPanel/UserPanel";
 import MovieInfo from "./dataPanel/DataPanel";
 import Backdrop from "./backdrop/Backdrop";
 import ActorsPanel from "./actorsPanel/ActorsPanel";
+import VideosPanel from "./videosPanel/VideosPanel";
 import MovieHeader from "./movieHeader/MovieHeader";
 import { movieDataObj } from "../../constants/movieDataObj";
 import { getMovieData } from "../../services/getMovieData";
@@ -42,7 +43,7 @@ const Movie = () => {
             <UserPanel movieData={movieData} />
             <MovieInfo movieData={movieData} />
             <ActorsPanel actors={movieData.credits} />
-            <div className="video"></div>
+            <VideosPanel videos={movieData.videos} />
             <div className="photos"></div>
             <div className="reccomend"></div>
             <div className="lists"></div>
