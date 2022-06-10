@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import MovieCard from "../../components/movieCard/MovieCard";
 import UserPanel from "./userPanel/UserPanel";
-import MovieInfo from "./movieInfo/MovieInfo";
+import MovieInfo from "./dataPanel/DataPanel";
 import Backdrop from "./backdrop/Backdrop";
+import ActorsPanel from "./actorsPanel/ActorsPanel";
+import MovieHeader from "./movieHeader/MovieHeader";
 import { movieDataObj } from "../../constants/movieDataObj";
 import { getMovieData } from "../../services/getMovieData";
-import { MovieHeader } from "./movieHeader/MovieHeader";
-import { MovieActors } from "./movieActors/MovieActors";
 
 const Movie = () => {
   const [movieData, setMovieData] = useState(movieDataObj);
@@ -41,7 +41,7 @@ const Movie = () => {
             <div className="movie_overview">{movieData.overview}</div>
             <UserPanel movieData={movieData} />
             <MovieInfo movieData={movieData} />
-            <MovieActors actors={movieData.credits}/>
+            <ActorsPanel actors={movieData.credits} />
             <div className="video"></div>
             <div className="photos"></div>
             <div className="reccomend"></div>

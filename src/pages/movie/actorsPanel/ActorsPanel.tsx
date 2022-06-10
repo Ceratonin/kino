@@ -1,4 +1,3 @@
-import React from "react";
 import { BASE_IMAGE_URL } from "../../../constants/baseUrl";
 
 interface IMovieActors {
@@ -8,12 +7,12 @@ interface IMovieActors {
   };
 }
 
-export const MovieActors = ({ actors }: IMovieActors) => {
+const ActorsPanel = ({ actors }: IMovieActors) => {
   return (
     <div className="actors-panel panel-wrapper">
       {actors.cast.splice(0, 6).map((actor, key) => {
         return (
-          <div>
+          <div key={actor.name}>
             <img
               src={`${BASE_IMAGE_URL}original${actor.profile_path}`}
               alt={actor.name}
@@ -29,3 +28,5 @@ export const MovieActors = ({ actors }: IMovieActors) => {
     </div>
   );
 };
+
+export default ActorsPanel;

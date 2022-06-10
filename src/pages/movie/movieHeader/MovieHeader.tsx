@@ -5,7 +5,7 @@ interface IMovieHeader {
   movieData: IMovieData;
 }
 
-export const MovieHeader = ({ movieData }: IMovieHeader) => {
+const MovieHeader = ({ movieData }: IMovieHeader) => {
   const getReleaseYear = () => movieData.release_date.split("-")[0];
   return (
     <div className="movie_header">
@@ -18,3 +18,5 @@ export const MovieHeader = ({ movieData }: IMovieHeader) => {
     </div>
   );
 };
+
+export default MovieHeader;

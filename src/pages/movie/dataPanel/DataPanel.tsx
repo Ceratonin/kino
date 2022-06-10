@@ -5,7 +5,7 @@ interface IMovieInfo {
   movieData: IMovieData;
 }
 
-const MovieInfo = ({ movieData }: IMovieInfo) => {
+const DataPanel = ({ movieData }: IMovieInfo) => {
   const toHours = () => {
     const hours = Math.trunc(movieData.runtime / 60);
     const minutes = movieData.runtime % 60;
@@ -54,4 +54,4 @@ const MovieInfo = ({ movieData }: IMovieInfo) => {
   );
 };
 
-export default MovieInfo;
+export default DataPanel;

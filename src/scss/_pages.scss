@@ -4,6 +4,8 @@
 @use "../pages/movie/movie";
 @use "../pages/movie/backdrop/backdrop";
 @use "../pages/movie/userPanel/userPanel";
-@use "../pages/movie/movieInfo/movieInfo";
+@use "../pages/movie/dataPanel/dataPanel";
 @use "../pages/movie/movieHeader/movieHeader";
-@use "../pages/movie/movieActors/movieActors"
+@use "../pages/movie/actorsPanel/actorsPanel";
+@use "../pages/movie/imagesPanel/imagesPanel";
+@use "../pages/movie/videosPanel/videosPanel";
