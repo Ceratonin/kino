@@ -15,53 +15,6 @@
       grid-row: 1/6;
     }
 
-    .movie_header {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      height: fit-content;
-
-      margin-left: 1rem;
-      grid-column: 5/17;
-      grid-row: 1/2;
-
-      .movie_title {
-        line-height: 100%;
-        text-shadow: #000 2px 0 5px;
-        font-family: "Roboto", sans-serif;
-        color: white;
-        font-size: 3rem;
-        margin-bottom: -5px;
-      }
-
-      .movie_release_date {
-        line-height: 100%;
-        font-size: 2rem;
-        align-self: end;
-        margin-bottom: -1px;
-      }
-
-      .movie_shot_by {
-        display: flex;
-        flex-direction: row;
-        margin-left: 5rem;
-        align-self: end;
-
-        p {
-          line-height: 100%;
-
-          align-self: end;
-        }
-
-        .movie_director {
-          line-height: 100%;
-
-          margin-left: 1rem;
-          font-size: 1.5rem;
-        }
-      }
-    }
-
     .movie_overview {
       grid-column: 5/13;
       grid-row: 2/6;
@@ -114,10 +67,10 @@
   }
 
   .actors {
-    margin-top: 2rem;
-    background-color: pink;
-    grid-column: 12/17;
-    grid-row: 6/12;
+    // margin-top: 2rem;
+    // background-color: pink;
+    // grid-column: 12/17;
+    // grid-row: 6/12;
   }
 
   .video {

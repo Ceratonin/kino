@@ -6,6 +6,8 @@ import MovieInfo from "./movieInfo/MovieInfo";
 import Backdrop from "./backdrop/Backdrop";
 import { movieDataObj } from "../../constants/movieDataObj";
 import { getMovieData } from "../../services/getMovieData";
+import { MovieHeader } from "./movieHeader/MovieHeader";
+import { MovieActors } from "./movieActors/MovieActors";
 
 const Movie = () => {
   const [movieData, setMovieData] = useState(movieDataObj);
@@ -15,8 +17,6 @@ const Movie = () => {
       setMovieData(res);
     });
   }, []);
-
-  const getReleaseYear = () => movieData.release_date.split("-")[0];
 
   return (
     <div className="movie">
@@ -37,22 +37,11 @@ const Movie = () => {
                 />
               )}
             </div>
-
-            <div className="movie_header">
-              <div className="movie_title">{movieData.title}</div>
-              <div className="movie_release_date">{getReleaseYear()}</div>
-              <div className="movie_shot_by">
-                <p>Shot by:</p>
-                <div className="movie_director">Director</div>
-              </div>
-            </div>
-
+            <MovieHeader movieData={movieData} />
             <div className="movie_overview">{movieData.overview}</div>
-
             <UserPanel movieData={movieData} />
-
             <MovieInfo movieData={movieData} />
-            <div className="actors"></div>
+            <MovieActors actors={movieData.credits}/>
             <div className="video"></div>
             <div className="photos"></div>
             <div className="reccomend"></div>

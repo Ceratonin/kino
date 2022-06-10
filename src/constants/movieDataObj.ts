@@ -17,6 +17,10 @@ export const movieDataObj = {
   poster_path: "",
   backdrop_path: "",
   video: false,
+  videos: { results: [] },
+  images: { backdrops: [], logos: [], posters: [] },
+
+  credits: { cast: [], crew: [] },
 
   original_language: "",
 

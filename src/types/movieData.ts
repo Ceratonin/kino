@@ -17,6 +17,10 @@ export interface IMovieData {
   poster_path: string;
   backdrop_path: string;
   video: boolean;
+  videos: { results: {}[] };
+  images: { backdrops: {}[]; logos: {}[]; posters: {}[] };
+
+  credits: { cast: {}[]; crew: {}[] };
 
   original_language: string;
 
