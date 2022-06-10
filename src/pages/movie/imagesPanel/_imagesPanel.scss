@@ -1,0 +1,30 @@
+.images-panel {
+  margin-top: 2rem;
+  grid-row: 12/17;
+  grid-column: 9/17;
+  margin-left: 1rem;
+
+  p {
+    padding-left: 0.75rem;
+  }
+
+  .panel-wrapper {
+    height: calc(100% - 1.5rem);
+    align-items: center;
+    display: flex;
+    background-color: transparent;
+    border: none;
+
+    .err {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      border: 1px solid #9ab;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 150%;
+      border-radius: 0.4rem;
+    }
+  }
+}

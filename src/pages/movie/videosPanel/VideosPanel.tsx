@@ -9,6 +9,7 @@ const VideosPanel = ({ videos }: IVideosPanel) => {
     site === "YouTube" ? key : ""
   );
   const url = urlArr.find((item) => item);
+  
   return (
     <div className="videos-panel">
       <p>Trailer:</p>

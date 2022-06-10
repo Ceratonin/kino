@@ -9,6 +9,7 @@ import VideosPanel from "./videosPanel/VideosPanel";
 import MovieHeader from "./movieHeader/MovieHeader";
 import { movieDataObj } from "../../constants/movieDataObj";
 import { getMovieData } from "../../services/getMovieData";
+import ImagesPanel from "./imagesPanel/ImagesPanel";
 
 const Movie = () => {
   const [movieData, setMovieData] = useState(movieDataObj);
@@ -44,7 +45,7 @@ const Movie = () => {
             <MovieInfo movieData={movieData} />
             <ActorsPanel actors={movieData.credits} />
             <VideosPanel videos={movieData.videos} />
-            <div className="photos"></div>
+            <ImagesPanel images={movieData.images}/>
             <div className="reccomend"></div>
             <div className="lists"></div>
             <div className="reviews"></div>
