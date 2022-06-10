@@ -1,13 +1,13 @@
 export interface IMovieData {
-  id: number;
-  imdb_id: number;
+  id: number | string;
+  imdb_id: number | string;
 
   title: string;
   original_title: string;
   overview: string;
   tagline: string;
 
-  genre_ids: number[];
+  genres: { id: number; name: string }[];
   release_date: string;
   adult: boolean;
   budget: number;
@@ -21,7 +21,7 @@ export interface IMovieData {
   original_language: string;
 
   media_type: string;
-  popularity: number;
-  vote_count: number;
-  vote_average: number;
+  popularity: number | string;
+  vote_count: number | string;
+  vote_average: number | string;
 }

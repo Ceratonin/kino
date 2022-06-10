@@ -5,10 +5,9 @@ interface IUserPanel {
   movieData: IMovieData;
 }
 
-// eslint-disable-next-line arrow-body-style
 const UserPanel = ({ movieData }: IUserPanel) => {
   return (
-    <div className="panel-container">
+    <div className="user-panel-container panel-wrapper">
       <span>
         <p>Original title</p>
         <h4>{movieData.original_title}</h4>

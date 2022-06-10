@@ -50,6 +50,6 @@
     "react/require-default-props": "off",
     "react/jsx-fragments":"off",
     "react/function-component-definition": "off",
-    "arrow-body-style":"warn"
+    "arrow-body-style":"off"
   }
 }

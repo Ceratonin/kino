@@ -1,9 +1,39 @@
+@use "../abstracts/variables" as *;
+
 .wrapper {
   background-color: #1a2127;
   padding-top: 2rem;
 
   &.movie {
     background-color: transparent;
+  }
+}
+
+.panel-wrapper {
+  border-radius: 0.3rem;
+  border: 1px solid $gray;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  span {
+    padding: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap; 
+
+    p {
+      font-size: 0.75rem;
+    }
+
+    hr {
+      margin-top: auto;
+    }
+  }
+
+  h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 0.5rem;
   }
 }
 
