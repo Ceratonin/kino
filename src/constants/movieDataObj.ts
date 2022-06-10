@@ -7,12 +7,12 @@ export const movieDataObj = {
   overview: "",
   tagline: "",
 
-  genres: [{ id: 1, name: "Action" }],
+  genres: [{ id: -1, name: "" }],
   release_date: "",
   adult: false,
-  budget: -1, // -1
-  revenue: -1, // -1
-  runtime: -1,
+  budget: 0,
+  revenue: 0,
+  runtime: 0,
 
   poster_path: "",
   backdrop_path: "",
