@@ -18,7 +18,6 @@ interface IReviewsData {
 }
 
 const ReviewsPanel = ({ reviews }: IReviewsData) => {
-  console.log(reviews.results);
   return (
     <ul className="reviews-panel panel-wrapper">
       {reviews.results.slice(0, 10).map((rev) => (
@@ -43,7 +42,7 @@ const ReviewsPanel = ({ reviews }: IReviewsData) => {
             </div>
 
             <div className="review_text">{rev.content}</div>
-            <hr/>
+            <hr />
           </div>
         </li>
       ))}
