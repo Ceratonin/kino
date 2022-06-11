@@ -1,0 +1,58 @@
+.reviews-panel {
+  // grid-auto-rows: 1fr;
+  // font-size: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  .review_block {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+
+    &:first-child {
+      padding-top: 0.5rem;
+    }
+
+    .review_avatar {
+      width: 40px;
+      height: 40px;
+      float: left;
+      position: relative;
+      display: block;
+      border-radius: 20px;
+      margin-right: 5px;
+      margin-left: 0.5rem;
+      top: 0;
+      border: 1px solid #9ab;
+    }
+
+    .review_content {
+      width: 100%;
+      float: right;
+
+      .review_header {
+        margin-bottom: 0.5rem;
+        display: flex;
+        max-width: 100%;
+        height: fit-content;
+        font-size: 0.9rem;
+
+        .review_author {
+        }
+
+        .review_rating {
+          padding: 0;
+          margin-left: 3rem;
+        }
+      }
+
+      padding-right: 3rem;
+      .review_text {
+        font-family: "Open sans";
+        font-size: 0.75rem;
+        white-space: pre-wrap;
+      }
+    }
+  }
+}

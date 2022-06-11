@@ -15,12 +15,12 @@ const ActorsPanel = ({ actors }: IMovieActors) => {
           <div key={actor.name}>
             <img
               src={`${BASE_IMAGE_URL}original${actor.profile_path}`}
-              alt={actor.name}
+              alt="Poster"
               width={38}
               height={58}
             />
-            <p>{actor.name}</p>
-            <p>as {actor.character}</p>
+            <p>{actor.name || "No Information"}</p>
+            <p>as {actor.character || "No Information"}</p>
           </div>
         );
       })}

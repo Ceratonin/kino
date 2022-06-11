@@ -24,6 +24,8 @@ export interface IMovieData {
 
   original_language: string;
 
+  reviews: { results: {}[] };
+  recommendations: { results: {}[] };
   media_type: string;
   popularity: number | string;
   vote_count: number | string;

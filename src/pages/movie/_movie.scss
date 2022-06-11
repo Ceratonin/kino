@@ -7,7 +7,7 @@
     font-family: "Open Sans";
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(30, 1fr);
+    grid-template-rows: repeat(21, 1fr);
     width: 100%;
 
     .movie_poster {
@@ -90,10 +90,10 @@
   }
 
   .reccomend {
-    margin-top: 2rem;
-    background-color: blue;
-    grid-column: 2/16;
-    grid-row: 17/20;
+    // margin-top: 2rem;
+    // background-color: blue;
+    // grid-column: 2/16;
+    // grid-row: 17/20;
   }
 
   // .lists {
@@ -104,10 +104,9 @@
   // }
 
   .reviews {
-    margin-top: 2rem;
-    background-color: burlywood;
-    background-attachment: fixed;
-    grid-column: 2/16;
-    grid-row: 22/30;
+    // background-color: burlywood;
+    // background-attachment: fixed;
+    // grid-column: 2/16;
+    // grid-row: 22/30;
   }
 }

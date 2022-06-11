@@ -21,9 +21,11 @@ export const movieDataObj = {
   images: { backdrops: [], logos: [], posters: [] },
 
   credits: { cast: [], crew: [] },
+  reviews: { results: [] },
 
   original_language: "",
 
+  recommendations: { results: [] },
   media_type: "",
   popularity: "", // -1
   vote_count: "", // -1

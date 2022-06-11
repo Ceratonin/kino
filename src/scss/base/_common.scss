@@ -14,12 +14,24 @@
   border: 1px solid $gray;
   background-color: rgba(0, 0, 0, 0.4);
 
+  &.err {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #9ab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 150%;
+    border-radius: 0.4rem;
+  }
+
   span {
     padding: 0.25rem;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    white-space: nowrap; 
+    white-space: nowrap;
 
     p {
       font-size: 0.75rem;

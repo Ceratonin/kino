@@ -1,8 +1,7 @@
-.images-panel {
+.similar-panel {
   margin-top: 2rem;
-  grid-row: 12/17;
-  grid-column: 9/17;
-  margin-left: 1rem;
+  grid-column: 2/16;
+  grid-row: 17/21;
 
   p {
     padding-left: 0.75rem;
@@ -10,10 +9,12 @@
 
   .panel-wrapper {
     height: calc(100% - 1.5rem);
-    align-items: center;
     display: flex;
-    background-color: transparent;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
     border: none;
+    background-color: transparent;
 
     &.err {
       background-color: rgba(0, 0, 0, 0.4);

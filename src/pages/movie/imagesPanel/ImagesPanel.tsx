@@ -16,7 +16,7 @@ const ImagesPanel = ({ images }: IImagesPanel) => {
   return (
     <div className="images-panel">
       <p>Images:</p>
-      <div className="panel-wrapper">
+      <div className={`panel-wrapper ${images.backdrops === [] ? "err" : ""}`}>
         {images.backdrops !== [] ? (
           <div
             id="carouselExampleControls"
@@ -57,7 +57,7 @@ const ImagesPanel = ({ images }: IImagesPanel) => {
             </button>
           </div>
         ) : (
-          <div className="err">No Images</div>
+          <div>No Images</div>
         )}
       </div>
     </div>

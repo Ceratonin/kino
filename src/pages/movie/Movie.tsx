@@ -7,6 +7,8 @@ import Backdrop from "./backdrop/Backdrop";
 import ActorsPanel from "./actorsPanel/ActorsPanel";
 import VideosPanel from "./videosPanel/VideosPanel";
 import MovieHeader from "./movieHeader/MovieHeader";
+import Recommended from "./similar/Similar";
+import ReviewsPanel from "./reviewsPanel/ReviewsPanel";
 import { movieDataObj } from "../../constants/movieDataObj";
 import { getMovieData } from "../../services/getMovieData";
 import ImagesPanel from "./imagesPanel/ImagesPanel";
@@ -45,11 +47,10 @@ const Movie = () => {
             <MovieInfo movieData={movieData} />
             <ActorsPanel actors={movieData.credits} />
             <VideosPanel videos={movieData.videos} />
-            <ImagesPanel images={movieData.images}/>
-            <div className="reccomend"></div>
-            <div className="lists"></div>
-            <div className="reviews"></div>
+            <ImagesPanel images={movieData.images} />
+            <Recommended similar={movieData.recommendations} />
           </div>
+            <ReviewsPanel reviews={movieData.reviews} />
         </div>
       </div>
     </div>
