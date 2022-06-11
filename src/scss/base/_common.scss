@@ -17,8 +17,8 @@
   &.err {
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 1px solid #9ab;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid #9ab!important;
     display: flex;
     align-items: center;
     justify-content: center;

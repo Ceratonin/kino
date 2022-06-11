@@ -6,11 +6,13 @@ const ImagesPanel = ({ images }: TImagesPanel) => {
     .splice(0, 10)
     .map((image) => image.file_path);
 
+  console.log(images);
+
   return (
     <div className="images-panel">
       <p>Images:</p>
-      <div className={`panel-wrapper ${images.backdrops === [] ? "err" : ""}`}>
-        {images.backdrops !== [] ? (
+      <div className={`panel-wrapper ${!images.backdrops.length && "err"}`}>
+        {images.backdrops.length ? (
           <div
             id="carouselExampleControls"
             className="carousel slide"

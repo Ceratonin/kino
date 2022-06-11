@@ -5,8 +5,8 @@ const Similar = ({ similar }: TSimilar) => {
   return (
     <div className="similar-panel">
       <p>Similar Movies:</p>
-      <div className={`panel-wrapper ${similar.results === [] ? "err" : ""}`}>
-        {similar.results !== [] ? (
+      <div className={`panel-wrapper ${!similar.results.length && "err"}`}>
+        {similar.results.length ? (
           similar.results
             .splice(0, 5)
             .map((res, key) => (

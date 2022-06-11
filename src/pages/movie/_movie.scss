@@ -2,6 +2,10 @@
   padding-top: 400px;
   padding-bottom: 40px;
 
+  &.no-backdrop {
+    padding-top: 80px;
+  }
+
   .grid-wrapper {
     position: relative;
     font-family: "Open Sans";
@@ -16,9 +20,15 @@
     }
 
     .movie_overview {
+      line-height: 148%;
+      display: -webkit-box;
       grid-column: 5/13;
       grid-row: 2/6;
-      margin: 0 1rem;
+      margin: 1rem 1rem 0 1rem;
+      -webkit-line-clamp: 11;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      word-break: break-word;
     }
   }
 }

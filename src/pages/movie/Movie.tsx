@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import MovieCard from "../../components/movieCard/MovieCard";
 import UserPanel from "./userPanel/UserPanel";
-import MovieInfo from "./dataPanel/DataPanel";
+import DataPanel from "./dataPanel/DataPanel";
 import Backdrop from "./backdrop/Backdrop";
 import ActorsPanel from "./actorsPanel/ActorsPanel";
 import VideosPanel from "./videosPanel/VideosPanel";
@@ -15,19 +15,21 @@ import ImagesPanel from "./imagesPanel/ImagesPanel";
 
 const Movie = () => {
   const [movieData, setMovieData] = useState(movieDataObj);
+  const [backdropUrl, setBackdropUrl] = useState(true);
 
   useEffect(() => {
-    getMovieData(64690).then((res) => {
+    getMovieData(63530).then((res) => {
       setMovieData(res);
+      setBackdropUrl(res.backdrop_path);
     });
   }, []);
 
   return (
     <div className="movie">
-      <Backdrop posterUrl={movieData.backdrop_path} />
+      {backdropUrl && <Backdrop posterUrl={movieData.backdrop_path} />}
       <Header movieHeader />
 
-      <div className="movie_content">
+      <div className={`movie_content ${backdropUrl || "no-backdrop"}`}>
         <div className="container">
           <div className="grid-wrapper">
             <div className="movie_poster">
@@ -52,7 +54,7 @@ const Movie = () => {
               vote_average={movieData.vote_average}
               popularity={movieData.popularity}
             />
-            <MovieInfo
+            <DataPanel
               release_date={movieData.release_date}
               runtime={movieData.runtime}
               tagline={movieData.tagline}

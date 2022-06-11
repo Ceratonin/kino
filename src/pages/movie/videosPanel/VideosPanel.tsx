@@ -9,7 +9,7 @@ const VideosPanel = ({ videos }: TVideosPanel) => {
   return (
     <div className="videos-panel">
       <p>Trailer:</p>
-      <div className={`panel-wrapper ${!url ? "err" : ""}`}>
+      <div className={`panel-wrapper ${!url && "err"}`}>
         {url ? (
           <iframe
             src={`https://www.youtube.com/embed/${url}`}

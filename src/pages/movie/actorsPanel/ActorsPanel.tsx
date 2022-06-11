@@ -1,6 +1,8 @@
 import { BASE_IMAGE_URL } from "../../../constants/baseUrl";
 import { TActorsPanel } from "../../../types/movieData";
 
+const fallback = require("../../../assets/images/blank_profile.jpg");
+
 const ActorsPanel = ({ cast }: TActorsPanel) => {
   return (
     <div className="actors-panel panel-wrapper">
@@ -8,7 +10,11 @@ const ActorsPanel = ({ cast }: TActorsPanel) => {
         return (
           <div key={actor.name}>
             <img
-              src={`${BASE_IMAGE_URL}original${actor.profile_path}`}
+              src={
+                actor.profile_path
+                  ? `${BASE_IMAGE_URL}original${actor.profile_path}`
+                  : fallback
+              }
               alt="Poster"
               width={38}
               height={58}
