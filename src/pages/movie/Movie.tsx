@@ -41,16 +41,32 @@ const Movie = () => {
                 />
               )}
             </div>
-            <MovieHeader movieData={movieData} />
+            <MovieHeader
+              release_date={movieData.release_date}
+              credits={movieData.credits}
+              title={movieData.title}
+            />
             <div className="movie_overview">{movieData.overview}</div>
-            <UserPanel movieData={movieData} />
-            <MovieInfo movieData={movieData} />
-            <ActorsPanel actors={movieData.credits} />
+            <UserPanel
+              original_title={movieData.original_title}
+              vote_average={movieData.vote_average}
+              popularity={movieData.popularity}
+            />
+            <MovieInfo
+              release_date={movieData.release_date}
+              runtime={movieData.runtime}
+              tagline={movieData.tagline}
+              budget={movieData.budget}
+              revenue={movieData.revenue}
+              original_language={movieData.original_language}
+              genres={movieData.genres}
+            />
+            <ActorsPanel cast={movieData.credits.cast} />
             <VideosPanel videos={movieData.videos} />
             <ImagesPanel images={movieData.images} />
             <Recommended similar={movieData.recommendations} />
           </div>
-            <ReviewsPanel reviews={movieData.reviews} />
+          <ReviewsPanel reviews={movieData.reviews} />
         </div>
       </div>
     </div>

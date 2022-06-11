@@ -1,12 +1,7 @@
 import MovieCard from "../../../components/movieCard/MovieCard";
+import { TSimilar } from "../../../types/movieData";
 
-interface ISimilar {
-  similar: {
-    results: { title: string; poster_path: string }[];
-  };
-}
-
-const Similar = ({ similar }: ISimilar) => {
+const Similar = ({ similar }: TSimilar) => {
   return (
     <div className="similar-panel">
       <p>Similar Movies:</p>

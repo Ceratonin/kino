@@ -1,19 +1,22 @@
-import React from "react";
-import { IMovieData } from "../../../types/movieData";
+import { TDataPanel } from "../../../types/movieData";
 
-interface IMovieInfo {
-  movieData: IMovieData;
-}
-
-const DataPanel = ({ movieData }: IMovieInfo) => {
+const DataPanel = ({
+  release_date: releaseDate,
+  runtime,
+  tagline,
+  budget,
+  revenue,
+  original_language: originalLanguage,
+  genres,
+}: TDataPanel) => {
   const toHours = () => {
-    const hours = Math.trunc(movieData.runtime / 60);
-    const minutes = movieData.runtime % 60;
+    const hours = Math.trunc(runtime / 60);
+    const minutes = runtime % 60;
     return `${hours}h ${minutes}m`;
   };
 
   const parseDate = () => {
-    return new Date(movieData.release_date).toDateString();
+    return new Date(releaseDate).toDateString();
   };
 
   const parseMoney = (amount: number) => {
@@ -24,13 +27,13 @@ const DataPanel = ({ movieData }: IMovieInfo) => {
     string,
     string | number | { id: number; name: string }[]
   >([
-    ["Tagline", movieData.tagline],
-    ["Runtime", movieData.runtime && toHours()],
-    ["ReleaseDate", movieData.release_date && parseDate()],
-    ["Budget", movieData.budget && `$${parseMoney(movieData.budget)}`],
-    ["Revenue", movieData.revenue && `$${parseMoney(movieData.revenue)}`],
-    ["OriginalLangueage", movieData.original_language],
-    ["Genres", movieData.genres],
+    ["Tagline", tagline],
+    ["Runtime", runtime && toHours()],
+    ["ReleaseDate", releaseDate && parseDate()],
+    ["Budget", budget && `$${parseMoney(budget)}`],
+    ["Revenue", revenue && `$${parseMoney(revenue)}`],
+    ["OriginalLangueage", originalLanguage],
+    ["Genres", genres],
   ]);
 
   return (
@@ -40,7 +43,7 @@ const DataPanel = ({ movieData }: IMovieInfo) => {
           <p>{key}</p>
           {key === "Genres" ? (
             <div className="genres-array">
-              {movieData.genres.map(({ id, name }) => (
+              {genres.map(({ id, name }) => (
                 <h4 key={id}>{name}</h4>
               ))}
             </div>

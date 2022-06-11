@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getPopularMovies } from "../../services/getPopularMovies";
-import { IMovieData } from "../../types/movieData";
+import { TMovieList } from "../../types/movieData";
 import MovieCard from "../movieCard/MovieCard";
 import MovieCardSkeleton from "../movieCard/MovieCardSkeleton";
 
@@ -22,7 +22,7 @@ const MovieList = () => {
       <div className="content-items">
         {!isLoaded
           ? [...new Array(20)].map((el, key) => <MovieCardSkeleton key={key} />)
-          : popularMoviesArray.map((movieData: IMovieData) => (
+          : popularMoviesArray.map((movieData: TMovieList) => (
               <MovieCard
                 key={movieData.id}
                 imageSize="w220_and_h330_face"

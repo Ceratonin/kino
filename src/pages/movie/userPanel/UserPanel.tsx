@@ -1,22 +1,21 @@
-import React from "react";
-import { IMovieData } from "../../../types/movieData";
+import { TUserPanel } from "../../../types/movieData";
 
-interface IUserPanel {
-  movieData: IMovieData;
-}
-
-const UserPanel = ({ movieData }: IUserPanel) => {
+const UserPanel = ({
+  original_title: originalTitle,
+  vote_average: voteAverage,
+  popularity,
+}: TUserPanel) => {
   return (
     <div className="user-panel-container panel-wrapper">
       <span>
         <p>Original title</p>
-        <h4>{movieData.original_title}</h4>
+        <h4>{originalTitle}</h4>
         <hr />
       </span>
 
       <span>
         <p>Average Rating</p>
-        <h4>{movieData.vote_average}</h4>
+        <h4>{voteAverage}</h4>
         <hr />
       </span>
 
@@ -28,7 +27,7 @@ const UserPanel = ({ movieData }: IUserPanel) => {
 
       <span>
         <p>Popularity</p>
-        <h4>{movieData.popularity}</h4>
+        <h4>{popularity}</h4>
         <hr />
       </span>
 

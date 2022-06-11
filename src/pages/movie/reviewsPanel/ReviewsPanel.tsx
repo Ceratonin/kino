@@ -1,23 +1,9 @@
 import { BASE_IMAGE_URL } from "../../../constants/baseUrl";
+import { TReviewsData } from "../../../types/movieData";
 
 const fallback = require("../../../assets/images/basic_profile.png");
 
-interface IReviewsData {
-  reviews: {
-    results: {
-      author_details: {
-        username: string;
-        avatar_path: string;
-        rating: number;
-      };
-      author: string;
-      id: string;
-      content: string;
-    }[];
-  };
-}
-
-const ReviewsPanel = ({ reviews }: IReviewsData) => {
+const ReviewsPanel = ({ reviews }: TReviewsData) => {
   return (
     <ul className="reviews-panel panel-wrapper">
       {reviews.results.slice(0, 10).map((rev) => (

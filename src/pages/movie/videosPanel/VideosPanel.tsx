@@ -1,10 +1,6 @@
-interface IVideosPanel {
-  videos: {
-    results: { key: string; site: string }[];
-  };
-}
+import { TVideosPanel } from "../../../types/movieData";
 
-const VideosPanel = ({ videos }: IVideosPanel) => {
+const VideosPanel = ({ videos }: TVideosPanel) => {
   const urlArr = videos.results.map(({ key, site }, id) =>
     site === "YouTube" ? key : ""
   );

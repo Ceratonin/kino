@@ -1,16 +1,10 @@
 import { BASE_IMAGE_URL } from "../../../constants/baseUrl";
+import { TActorsPanel } from "../../../types/movieData";
 
-interface IMovieActors {
-  actors: {
-    cast: { name: string; character: string; profile_path: string }[];
-    crew: {}[];
-  };
-}
-
-const ActorsPanel = ({ actors }: IMovieActors) => {
+const ActorsPanel = ({ cast }: TActorsPanel) => {
   return (
     <div className="actors-panel panel-wrapper">
-      {actors.cast.splice(0, 6).map((actor, key) => {
+      {cast.splice(0, 6).map((actor, key) => {
         return (
           <div key={actor.name}>
             <img

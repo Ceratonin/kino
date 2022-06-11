@@ -1,14 +1,7 @@
 import { BASE_IMAGE_URL } from "../../../constants/baseUrl";
-// import "bootstrap/dist/js/bootstrap.bundle";
+import { TImagesPanel } from "../../../types/movieData";
 
-interface IImagesPanel {
-  images: {
-    backdrops: { file_path: string }[];
-    posters: { file_path: string }[];
-  };
-}
-
-const ImagesPanel = ({ images }: IImagesPanel) => {
+const ImagesPanel = ({ images }: TImagesPanel) => {
   const imagesUrlArr = images.backdrops
     .splice(0, 10)
     .map((image) => image.file_path);
