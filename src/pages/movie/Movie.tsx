@@ -18,7 +18,7 @@ const Movie = () => {
   const [backdropUrl, setBackdropUrl] = useState(true);
 
   useEffect(() => {
-    getMovieData(63530).then((res) => {
+    getMovieData(64690).then((res) => {
       setMovieData(res);
       setBackdropUrl(res.backdrop_path);
     });

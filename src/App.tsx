@@ -7,7 +7,7 @@ import Movie from "./pages/movie/Movie";
 function App() {
   return (
     <div className="App">
-      <Movie />
+      <Films />
     </div>
   );
 }

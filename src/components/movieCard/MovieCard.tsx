@@ -5,6 +5,7 @@ interface IMovieCard {
   posterUrl: string;
   title: string;
   imageSize: string;
+  link?: string;
   containerSize: {
     height: number;
     width: number;
@@ -16,16 +17,21 @@ const MovieCard = ({
   title,
   imageSize,
   containerSize,
+  link,
 }: IMovieCard) => (
   <div className="movie-card-wrapper">
     <div className="movie-card-content">
-      {/*                            \/    <------------ photo image/ original for original size */}
       <img
         src={`${BASE_IMAGE_URL}${imageSize}${posterUrl}`}
         alt={title}
         width={containerSize.width}
         height={containerSize.height}
       />
+      {link && (
+        <a href="https://letterboxd.com/ceratonin/watchlist/page/2/">
+          <span></span>
+        </a>
+      )}
     </div>
   </div>
 );
