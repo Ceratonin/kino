@@ -1,31 +1,16 @@
-import React, { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import { BASE_IMAGE_URL } from "../../constants/baseUrl";
-import { getMovieData } from "../../services/getMovieData";
+import { getRandApprovedData } from "../../services/getRandomBackdrop";
 
 const ErrorPage = () => {
-  const [movieData, setMovieData] = useState({
-    backdrop_path: "",
-    title: "",
-    release_date: "",
-  });
 
-  useEffect(() => {
-    getMovieData(64690).then((res) => {
-      setMovieData(res);
-    });
-  }, []);
-
-  const dateToYear = () => {
-    console.log(movieData.release_date)
-    return new Date(movieData.release_date).getFullYear()
-  }
+  const {title, year, backdropUrl} = getRandApprovedData()
 
   return (
     <div className="error-page">
       <Header movieHeader />
       <img
-        src={`${BASE_IMAGE_URL}original${movieData.backdrop_path}`}
+        src={`${BASE_IMAGE_URL}original${backdropUrl}`}
         alt="err"
         className="backdrop"
       />
@@ -33,8 +18,8 @@ const ErrorPage = () => {
         <p className="container">Page Not Found!</p>
       </span>
       <span className="movie-title">
-        <p>{movieData.title}</p>
-        <p>{dateToYear()}</p>
+        <p>{title}</p>
+        <p>{year}</p>
       </span>
     </div>
   );
