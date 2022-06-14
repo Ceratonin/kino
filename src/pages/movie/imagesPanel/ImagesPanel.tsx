@@ -3,7 +3,7 @@ import { TImagesPanel } from "../../../types/movieData";
 
 const ImagesPanel = ({ images }: TImagesPanel) => {
   const imagesUrlArr = images.backdrops
-    .splice(0, images.backdrops.length-1)
+    // .splice(0, images.backdrops.length - 1)
     .map((image) => image.file_path);
 
   return (
