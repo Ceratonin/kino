@@ -8,7 +8,7 @@ import ErrorPage from "./pages/error/ErrorPage";
 function App() {
   return (
     <div className="App">
-      <ErrorPage />
+      <Movie />
     </div>
   );
 }
