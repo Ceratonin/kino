@@ -11,6 +11,7 @@ const Similar = ({ similar }: TSimilar) => {
             .splice(0, 5)
             .map((res, key) => (
               <MovieCard
+                id={res.id}
                 key={key}
                 title={res.title}
                 posterUrl={res.poster_path}

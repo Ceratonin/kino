@@ -1,4 +1,4 @@
-type id = number | string;
+type id = string;
 type imdb_id = number | string;
 
 type title = string;
@@ -42,7 +42,7 @@ type reviews = {
     content: string;
   }[];
 };
-type recommendations = { results: { title: string; poster_path: string }[] };
+type recommendations = { results: { title: string; poster_path: string, id:string }[] };
 type media_type = string;
 type popularity = number | string;
 type vote_count = number | string;

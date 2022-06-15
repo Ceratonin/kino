@@ -45,7 +45,7 @@ export const movieDataObj = {
 
   original_language: "",
 
-  recommendations: { results: [{ title: "", poster_path: "" }] },
+  recommendations: { results: [{ title: "", poster_path: "", id:"" }] },
   media_type: "",
   popularity: "", // -1
   vote_count: "", // -1

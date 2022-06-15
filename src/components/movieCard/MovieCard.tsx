@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { BASE_IMAGE_URL } from "../../constants/baseUrl";
 
 interface IMovieCard {
   posterUrl: string;
   title: string;
   imageSize: string;
-  link?: string;
+  id: string;
   containerSize: {
     height: number;
     width: number;
@@ -17,21 +18,18 @@ const MovieCard = ({
   title,
   imageSize,
   containerSize,
-  link,
+  id,
 }: IMovieCard) => (
   <div className="movie-card-wrapper">
     <div className="movie-card-content">
+      <Link to={`/movie/${id}`}>
       <img
         src={`${BASE_IMAGE_URL}${imageSize}${posterUrl}`}
         alt={title}
         width={containerSize.width}
         height={containerSize.height}
-      />
-      {link && (
-        <a href="https://letterboxd.com/ceratonin/watchlist/page/2/">
-          <span></span>
-        </a>
-      )}
+        />
+        </Link>
     </div>
   </div>
 );

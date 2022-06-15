@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Header from "../../components/header/Header";
 import MovieCard from "../../components/movieCard/MovieCard";
 import UserPanel from "./userPanel/UserPanel";
@@ -14,11 +15,12 @@ import { getMovieData } from "../../services/getMovieData";
 import ImagesPanel from "./imagesPanel/ImagesPanel";
 
 const Movie = () => {
+  const { id } = useParams();
   const [movieData, setMovieData] = useState(movieDataObj);
   const [backdropUrl, setBackdropUrl] = useState(true);
 
   useEffect(() => {
-    getMovieData(64690).then((res) => {
+    getMovieData(id!).then((res) => {
       setMovieData(res);
       setBackdropUrl(res.backdrop_path);
     });
@@ -36,6 +38,7 @@ const Movie = () => {
               {/* Skeleton could be added */}
               {movieData.poster_path && (
                 <MovieCard
+                  id={movieData.id}
                   posterUrl={movieData.poster_path}
                   containerSize={{ width: 230, height: 345 }}
                   imageSize="original"

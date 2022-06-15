@@ -29,7 +29,7 @@ const MovieList = () => {
                 containerSize={{ width: 154, height: 231 }}
                 posterUrl={movieData.poster_path}
                 title={movieData.title}
-                link="123"
+                id={movieData.id}
               />
             ))}
       </div>
