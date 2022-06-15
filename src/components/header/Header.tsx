@@ -8,7 +8,9 @@ const Header = ({ movieHeader }: IHeader) => {
   return (
     <header className={`header ${movieHeader ? "movie" : ""}`}>
       <div className="container">
-        <div className="header__title">KINO</div>
+        <a href="/">
+          <div className="header__title">KINO</div>
+        </a>
         <div className="header__content">
           <Navbar />
 
