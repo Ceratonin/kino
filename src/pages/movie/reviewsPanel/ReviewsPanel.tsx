@@ -6,7 +6,6 @@ const fallback = require("../../../assets/images/blank_profile.jpg");
 const ReviewsPanel = ({ reviews }: TReviewsData) => {
   const getAvatarPath = (num: number) => {
     const url = reviews.results[num].author_details.avatar_path;
-    console.log(url);
     return url.split("/").length === 2
       ? `${BASE_IMAGE_URL}original${url}`
       : url.slice(1, url.length);

@@ -2,9 +2,7 @@ import { BASE_IMAGE_URL } from "../../../constants/baseUrl";
 import { TImagesPanel } from "../../../types/movieData";
 
 const ImagesPanel = ({ images }: TImagesPanel) => {
-  const imagesUrlArr = images.backdrops
-    // .splice(0, images.backdrops.length - 1)
-    .map((image) => image.file_path);
+  const imagesUrlArr = images.backdrops.map((image) => image.file_path);
 
   return (
     <div className="images-panel">
@@ -22,11 +20,13 @@ const ImagesPanel = ({ images }: TImagesPanel) => {
                   key={url}
                   className={`carousel-item ${key === 0 ? "active" : ""}`}
                 >
-                  <img
-                    src={`${BASE_IMAGE_URL}original${url}`}
-                    className="d-block w-100"
-                    alt="backdrop"
-                  />
+                  {url && (
+                    <img
+                      src={`${BASE_IMAGE_URL}original${url}`}
+                      className="d-block w-100"
+                      alt="backdrop"
+                    />
+                  )}
                 </div>
               ))}
             </div>
