@@ -8,7 +8,7 @@ import Backdrop from "./backdrop/Backdrop";
 import ActorsPanel from "./actorsPanel/ActorsPanel";
 import VideosPanel from "./videosPanel/VideosPanel";
 import MovieHeader from "./movieHeader/MovieHeader";
-import Recommended from "./similar/Similar";
+import Similar from "./similar/Similar";
 import ReviewsPanel from "./reviewsPanel/ReviewsPanel";
 import { movieDataObj } from "../../constants/movieDataObj";
 import { getMovieData } from "../../services/getMovieData";
@@ -16,6 +16,7 @@ import ImagesPanel from "./imagesPanel/ImagesPanel";
 
 const Movie = () => {
   const { id } = useParams();
+
   const [movieData, setMovieData] = useState(movieDataObj);
   const [backdropUrl, setBackdropUrl] = useState(true);
 
@@ -24,7 +25,8 @@ const Movie = () => {
       setMovieData(res);
       setBackdropUrl(res.backdrop_path);
     });
-  }, []);
+    window.scrollTo(0, 0)
+  }, [id]);
 
   return (
     <div className="movie">
@@ -69,7 +71,7 @@ const Movie = () => {
             <ActorsPanel cast={movieData.credits.cast} />
             <VideosPanel videos={movieData.videos} />
             <ImagesPanel images={movieData.images} />
-            <Recommended similar={movieData.recommendations} />
+            <Similar similar={movieData.recommendations} />
           </div>
           <ReviewsPanel reviews={movieData.reviews} />
         </div>
