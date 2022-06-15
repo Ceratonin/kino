@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
 interface IHeader {
@@ -8,9 +9,9 @@ const Header = ({ movieHeader }: IHeader) => {
   return (
     <header className={`header ${movieHeader ? "movie" : ""}`}>
       <div className="container">
-        <a href="/">
+        <Link to="/">
           <div className="header__title">KINO</div>
-        </a>
+        </Link>
         <div className="header__content">
           <Navbar />
 
