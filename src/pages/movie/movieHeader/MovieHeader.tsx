@@ -16,8 +16,7 @@ const MovieHeader = ({
 
   return (
     <div className="movie_header">
-      <div className="movie_title">{title}</div>
-      {/* eslint-disable-next-line react/jsx-no-useless-fragment */}
+      <div className={`movie_title ${title.length > 25 ? "text-small" : ""}`}>{title}</div>
       <div className="side_info">
         <p>{getReleaseYear()}</p>
         <div className="movie_shot_by">
