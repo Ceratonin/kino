@@ -25,7 +25,7 @@ const Movie = () => {
       setMovieData(res);
       setBackdropUrl(res.backdrop_path);
     });
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }, [id]);
 
   return (
@@ -40,6 +40,7 @@ const Movie = () => {
               {/* Skeleton could be added */}
               {movieData.poster_path && (
                 <MovieCard
+                  notLink
                   id={movieData.id}
                   posterUrl={movieData.poster_path}
                   containerSize={{ width: 230, height: 345 }}

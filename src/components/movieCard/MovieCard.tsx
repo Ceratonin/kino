@@ -7,6 +7,7 @@ interface IMovieCard {
   title: string;
   imageSize: string;
   id: string;
+  notLink?: boolean;
   containerSize: {
     height: number;
     width: number;
@@ -19,17 +20,27 @@ const MovieCard = ({
   imageSize,
   containerSize,
   id,
+  notLink,
 }: IMovieCard) => (
   <div className="movie-card-wrapper">
     <div className="movie-card-content">
-      <Link to={`/movie/${id}`}>
-      <img
-        src={`${BASE_IMAGE_URL}${imageSize}${posterUrl}`}
-        alt={title}
-        width={containerSize.width}
-        height={containerSize.height}
-        />
+      {!notLink ? (
+        <Link to={`/movie/${id}`}>
+          <img
+            src={`${BASE_IMAGE_URL}${imageSize}${posterUrl}`}
+            alt={title}
+            width={containerSize.width}
+            height={containerSize.height}
+          />
         </Link>
+      ) : (
+        <img
+          src={`${BASE_IMAGE_URL}${imageSize}${posterUrl}`}
+          alt={title}
+          width={containerSize.width}
+          height={containerSize.height}
+        />
+      )}
     </div>
   </div>
 );
