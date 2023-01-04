@@ -1,13 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 
-interface IHeader {
-  movieHeader?: boolean;
-}
+const Header = () => {
+  const obj = useLocation();
 
-const Header = ({ movieHeader }: IHeader) => {
+  const movieHeader = () => {
+    return /\/movie\/*/.test(obj.pathname);
+  };
+
   return (
-    <header className={`header ${movieHeader ? "movie" : ""}`}>
+    <header className={`header ${movieHeader() && "movie"}`}>
       <div className="container">
         <Link to="/">
           <div className="header__title">KINO</div>

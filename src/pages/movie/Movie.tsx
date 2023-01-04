@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Header from "../../components/header/Header";
 import MovieCard from "../../components/movieCard/MovieCard";
 import UserPanel from "./userPanel/UserPanel";
 import DataPanel from "./dataPanel/DataPanel";
@@ -31,7 +30,6 @@ const Movie = () => {
   return (
     <div className="movie">
       {backdropUrl && <Backdrop posterUrl={movieData.backdrop_path} />}
-      <Header movieHeader />
 
       <div className={`movie_content ${backdropUrl || "no-backdrop"}`}>
         <div className="container">

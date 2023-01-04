@@ -1,14 +1,11 @@
-import Header from "../../components/header/Header";
 import { BASE_IMAGE_URL } from "../../constants/baseUrl";
 import { getRandApprovedData } from "../../services/getRandomBackdrop";
 
 const ErrorPage = () => {
-
-  const {title, year, backdropUrl} = getRandApprovedData()
+  const { title, year, backdropUrl } = getRandApprovedData();
 
   return (
     <div className="error-page">
-      <Header movieHeader />
       <img
         src={`${BASE_IMAGE_URL}original${backdropUrl}`}
         alt="err"

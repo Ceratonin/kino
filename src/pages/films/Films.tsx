@@ -5,13 +5,10 @@ import MovieList from "../../components/movieList/MovieList";
 
 const Films = () => {
   return (
-    <div>
-      <Header />
-      <div className="wrapper">
-        <div className="container">
-          <Filter />
-          <MovieList />
-        </div>
+    <div className="wrapper">
+      <div className="container">
+        <Filter />
+        <MovieList />
       </div>
     </div>
   );

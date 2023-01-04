@@ -5,10 +5,13 @@ import Main from "./pages/main/Main";
 import Films from "./pages/films/Films";
 import Movie from "./pages/movie/Movie";
 import ErrorPage from "./pages/error/ErrorPage";
+import Header from "./components/header/Header";
 
 function App() {
   return (
     <div className="App">
+      <Header />
+
       <Routes>
         <Route path="/" element={<Films />} />
         <Route path="movie/:id" element={<Movie />} />
