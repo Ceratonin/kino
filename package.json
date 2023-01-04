@@ -6,7 +6,6 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.0",
-    "@types/bootstrap": "^5.1.12",
     "@types/jest": "^28.1.1",
     "@types/node": "^17.0.40",
     "@types/react-dom": "^18.0.5",
@@ -50,6 +49,7 @@
   },
   "devDependencies": {
     "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining": "^7.17.12",
+    "@types/bootstrap": "^5.2.6",
     "@types/react": "^18.0.11",
     "@types/react-router-dom": "^5.3.3",
     "eslint": "^8.17.0",
