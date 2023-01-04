@@ -1,12 +1,15 @@
+import { useContext } from "react";
 import { BASE_IMAGE_URL } from "../../../constants/baseUrl";
-import { TActorsPanel } from "../../../types/movieData";
+import movieDataContext from "../../../contexts/movieDataContext";
 
 const fallback = require("../../../assets/images/blank_profile.jpg");
 
-const ActorsPanel = ({ cast }: TActorsPanel) => {
+const ActorsPanel = () => {
+  const { credits } = useContext(movieDataContext);
+
   return (
     <div className="actors-panel panel-wrapper">
-      {cast.splice(0, 6).map((actor, key) => {
+      {credits.cast.splice(0, 6).map((actor, key) => {
         return (
           <div key={actor.name}>
             <img

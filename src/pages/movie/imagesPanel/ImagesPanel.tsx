@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { BASE_IMAGE_URL } from "../../../constants/baseUrl";
-import { TImagesPanel } from "../../../types/movieData";
+import movieDataContext from "../../../contexts/movieDataContext";
 
-const ImagesPanel = ({ images }: TImagesPanel) => {
+const ImagesPanel = () => {
+  const { images } = useContext(movieDataContext);
+
   const imagesUrlArr = images.backdrops.map((image) => image.file_path);
 
   return (

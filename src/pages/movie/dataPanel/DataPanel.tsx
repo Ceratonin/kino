@@ -1,14 +1,17 @@
-import { TDataPanel } from "../../../types/movieData";
+import { useContext } from "react";
+import movieDataContext from "../../../contexts/movieDataContext";
 
-const DataPanel = ({
-  release_date: releaseDate,
-  runtime,
-  tagline,
-  budget,
-  revenue,
-  original_language: originalLanguage,
-  genres,
-}: TDataPanel) => {
+const DataPanel = () => {
+  const {
+    release_date: releaseDate,
+    runtime,
+    tagline,
+    budget,
+    revenue,
+    original_language: originalLanguage,
+    genres,
+  } = useContext(movieDataContext);
+
   const toHours = () => {
     const hours = Math.trunc(runtime / 60);
     const minutes = runtime % 60;

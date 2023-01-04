@@ -1,13 +1,18 @@
+import { useContext } from "react";
 import MovieCard from "../../../components/movieCard/MovieCard";
-import { TSimilar } from "../../../types/movieData";
+import movieDataContext from "../../../contexts/movieDataContext";
 
-const Similar = ({ similar }: TSimilar) => {
+const Similar = () => {
+  const { recommendations } = useContext(movieDataContext);
+
   return (
     <div className="similar-panel">
       <p>Similar Movies:</p>
-      <div className={`panel-wrapper ${!similar.results.length && "err"}`}>
-        {similar.results.length ? (
-          similar.results
+      <div
+        className={`panel-wrapper ${!recommendations.results.length && "err"}`}
+      >
+        {recommendations.results.length ? (
+          recommendations.results
             .splice(0, 5)
             .map((res, key) => (
               <MovieCard

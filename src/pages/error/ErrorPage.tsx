@@ -11,10 +11,10 @@ const ErrorPage = () => {
         alt="err"
         className="backdrop"
       />
-      <span className="error-message">
+      <span className="error-page__message">
         <p className="container">Page Not Found!</p>
       </span>
-      <span className="movie-title">
+      <span className="error-page__annotation">
         <p>{title}</p>
         <p>{year}</p>
       </span>

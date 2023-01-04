@@ -42,49 +42,13 @@ type reviews = {
     content: string;
   }[];
 };
-type recommendations = { results: { title: string; poster_path: string, id:string }[] };
+type recommendations = {
+  results: { title: string; poster_path: string; id: string }[];
+};
 type media_type = string;
 type popularity = number | string;
 type vote_count = number | string;
 type vote_average = number | string;
-
-export type TMovieHeader = {
-  release_date: release_date;
-  credits: credits;
-  title: title;
-};
-
-export type TUserPanel = {
-  original_title: original_title;
-  vote_average: vote_average;
-  popularity: popularity;
-};
-
-export type TDataPanel = {
-  release_date: release_date;
-  runtime: runtime;
-  tagline: tagline;
-  budget: budget;
-  revenue: revenue;
-  original_language: original_language;
-  genres: genres;
-};
-
-export type TActorsPanel = {
-  cast: credits["cast"];
-};
-
-export type TVideosPanel = {
-  videos: videos;
-};
-
-export type TImagesPanel = {
-  images: images;
-};
-
-export type TSimilar = {
-  similar: recommendations;
-};
 
 export type TReviewsData = {
   reviews: reviews;

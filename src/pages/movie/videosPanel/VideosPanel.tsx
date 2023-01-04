@@ -1,6 +1,9 @@
-import { TVideosPanel } from "../../../types/movieData";
+import { useContext } from "react";
+import movieDataContext from "../../../contexts/movieDataContext";
 
-const VideosPanel = ({ videos }: TVideosPanel) => {
+const VideosPanel = () => {
+  const { videos } = useContext(movieDataContext);
+
   const urlArr = videos.results.map(({ key, site }, id) =>
     site === "YouTube" ? key : ""
   );
