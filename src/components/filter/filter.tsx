@@ -6,7 +6,7 @@ const Filter = () => {
     <div className="container">
       <section className="filter">
         <p>Filter movies:</p>
-        <div className="btn-group">
+        <div className="btn-group ">
           {[...filterValues.keys()].map((btn) => (
             <Dropdown key={btn} items={filterValues.get(btn)!} saveTitle>
               {btn}
@@ -20,9 +20,10 @@ const Filter = () => {
             Most Popular First
           </Dropdown>
         </section>
-        <div className="filter__search">
+        
+        <section className="filter__search">
           <input type="text" placeholder="Find a movie" />
-        </div>
+        </section>
       </section>
     </div>
   );

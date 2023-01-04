@@ -1,10 +1,10 @@
 @use "../../scss/abstracts/variables" as *;
 
-.movie-card-wrapper {
+.movieCard {
   display: flex;
   justify-content: center;
 
-  .movie-card-content {
+  .movieCard__content {
     border-radius: 5px;
     border: 1px solid $gray;
 

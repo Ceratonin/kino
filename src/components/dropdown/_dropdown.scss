@@ -1,42 +1,33 @@
+@use "../../scss/abstracts/variables" as *;
+
 .dropdown {
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  user-select: none; // <----- ???
+  user-select: none;
 
-  .dropdown-toggle {
-    display: flex;
-    align-items: center;
+  padding: 1px 6px;
 
-    &::after {
-      content: none !important;
-    }
-  }
-
-  .dropdown-menu {
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    top: 100% !important;
-    min-width: fit-content !important;
-    padding: 0;
-
-    hr {
-      margin: 0;
-    }
-
-    li {
-      width: 100%;
-      font-size: 0.9rem;
-
-      .dropdown-item:active {
-        color: white;
-        background-color: rgba(255, 255, 255, 0.15);
-      }
-    }
-  }
-  
   &:hover {
     color: white;
+  }
+}
+
+.dropdown-menu {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  top: 100% !important;
+  min-width: fit-content !important;
+  padding: 0;
+
+  .dropdown-item {
+    font-size: 0.9rem;
+    padding: 1px 8px;
+
+    &:active {
+      color: white;
+      background-color: rgba(255, 255, 255, 0.15);
+    }
   }
 }

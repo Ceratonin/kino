@@ -4,16 +4,29 @@ import Navbar from "./Navbar";
 const Header = () => {
   const obj = useLocation();
 
-  const movieHeader = () => {
-    return /\/movie\/*/.test(obj.pathname);
+  const headerClassName = () => {
+    const str = /\/[a-z]+\/?/.exec(obj.pathname);
+    let outputStr;
+    switch (str && str[0]) {
+      case "/home":
+        // <----------ADD HERE---------->
+        outputStr = "";
+        break;
+
+      default:
+        outputStr = "special";
+    }
+
+    return outputStr ? `header_${outputStr}` : "";
   };
 
   return (
-    <header className={`header ${movieHeader() && "movie"}`}>
+    <header className={`header ${headerClassName()}`}>
       <div className="container">
-        <Link to="/">
+        <Link to="/home">
           <div className="header__title">KINO</div>
         </Link>
+
         <div className="header__content">
           <Navbar />
 

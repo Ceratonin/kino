@@ -16,7 +16,6 @@ const Dropdown = ({ children, saveTitle, items }: IDropdown) => {
   return (
     <div className="dropdown">
       <div
-        className="dropdown-toggle"
         id="dropdownMenuButton"
         data-bs-toggle="dropdown"
         aria-expanded="false"
@@ -42,6 +41,6 @@ const Dropdown = ({ children, saveTitle, items }: IDropdown) => {
       </ul>
     </div>
   );
-}
+};
 
 export default Dropdown;

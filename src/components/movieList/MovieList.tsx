@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getPopularMovies } from "../../services/getPopularMovies";
 import { TMovieList } from "../../types/movieData";
 import MovieCard from "../movieCard/MovieCard";
@@ -16,10 +16,10 @@ const MovieList = () => {
   }, []);
 
   return (
-    <div className="content">
+    <div className="movieList">
       <hr />
-      <p className="content-top">Popular movies</p>
-      <div className="content-items">
+      <p>Popular movies</p>
+      <div className="movieList__content">
         {!isLoaded
           ? [...new Array(20)].map((el, key) => <MovieCardSkeleton key={key} />)
           : popularMoviesArray.map((movieData: TMovieList) => (

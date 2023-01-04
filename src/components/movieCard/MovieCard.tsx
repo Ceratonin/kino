@@ -22,8 +22,8 @@ const MovieCard = ({
   id,
   notLink,
 }: IMovieCard) => (
-  <div className="movie-card-wrapper">
-    <div className="movie-card-content">
+  <div className="movieCard">
+    <div className="movieCard__content">
       {!notLink ? (
         <Link to={`/movie/${id}`}>
           <img
