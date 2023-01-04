@@ -1,14 +1,5 @@
 @use "../abstracts/variables" as *;
 
-.wrapper {
-  background-color: #1a2127;
-  padding-top: 2rem;
-
-  &.movie {
-    background-color: transparent;
-  }
-}
-
 .panel-wrapper {
   border-radius: 0.3rem;
   border: 1px solid $gray;
@@ -18,7 +9,7 @@
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4) !important;
-    border: 1px solid #9ab!important;
+    border: 1px solid #9ab !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,17 +55,18 @@ section {
 
 .container {
   color: #9ab;
-  padding: 0 !important;
+  padding: 0;
+  
 
   @media (min-width: 768px) {
-    max-width: 540px !important;
+    max-width: 540px;
   }
 
   @media (min-width: 992px) {
-    max-width: 720px !important;
+    max-width: 720px;
   }
 
   @media (min-width: 1200px) {
-    max-width: 950px !important;
+    max-width: 950px;
   }
 }
