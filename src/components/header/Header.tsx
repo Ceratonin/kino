@@ -9,6 +9,7 @@ const Header = () => {
     let outputStr;
     switch (str && str[0]) {
       case "/home":
+      case null:
         // <----------ADD HERE---------->
         outputStr = "";
         break;
