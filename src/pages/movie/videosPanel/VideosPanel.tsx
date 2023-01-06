@@ -15,7 +15,7 @@ const VideosPanel = () => {
       <div className={`panel-wrapper ${!url && "err"}`}>
         {url ? (
           <iframe
-            src={`https://www.youtube.com/embed/${url}`}
+            src={`https://www.youtube-nocookie.com/embed/${url}`}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
