@@ -3,19 +3,12 @@ import movieDataContext from "../../../contexts/movieDataContext";
 
 const UserPanel = () => {
   const {
-    original_title: originalTitle,
     vote_average: voteAverage,
     popularity,
   } = useContext(movieDataContext);
 
   return (
-    <div className="user-panel-container panel-wrapper">
-      <span>
-        <p>Original title</p>
-        <h4>{originalTitle}</h4>
-        <hr />
-      </span>
-
+    <div className="user-panel__container panel-wrapper">
       <span>
         <p>Average Rating</p>
         <h4>{voteAverage}</h4>
