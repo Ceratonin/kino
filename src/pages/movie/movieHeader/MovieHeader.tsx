@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import movieDataContext from "../../../contexts/movieDataContext";
+import movieDataContext from "contexts/movieDataContext";
 
 const MovieHeader = () => {
   const {

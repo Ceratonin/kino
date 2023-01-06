@@ -1,15 +1,15 @@
-@use "../pages/films/films";
-@use "../pages/main/main";
+@use "pages/films/films";
+@use "pages/main/main";
 
-@use "../pages/movie/movie";
-@use "../pages/movie/backdrop/backdrop";
-@use "../pages/movie/userPanel/userPanel";
-@use "../pages/movie/dataPanel/dataPanel";
-@use "../pages/movie/movieHeader/movieHeader";
-@use "../pages/movie/actorsPanel/actorsPanel";
-@use "../pages/movie/imagesPanel/imagesPanel";
-@use "../pages/movie/videosPanel/videosPanel";
-@use "../pages/movie/similar/similar";
-@use "../pages/movie/reviewsPanel/reviewsPanel";
+@use "pages/movie/movie";
+@use "pages/movie/backdrop/backdrop";
+@use "pages/movie/userPanel/userPanel";
+@use "pages/movie/dataPanel/dataPanel";
+@use "pages/movie/movieHeader/movieHeader";
+@use "pages/movie/actorsPanel/actorsPanel";
+@use "pages/movie/imagesPanel/imagesPanel";
+@use "pages/movie/videosPanel/videosPanel";
+@use "pages/movie/similar/similar";
+@use "pages/movie/reviewsPanel/reviewsPanel";
 
-@use "../pages/error/errorPage";
+@use "pages/error/errorPage";

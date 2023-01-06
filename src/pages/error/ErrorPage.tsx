@@ -1,5 +1,5 @@
-import { BASE_IMAGE_URL } from "../../constants/baseUrl";
-import { getRandApprovedData } from "../../services/getRandomBackdrop";
+import { BASE_IMAGE_URL } from "constants/baseUrl";
+import { getRandApprovedData } from "services/getRandomBackdrop";
 
 const ErrorPage = () => {
   const { title, year, backdropUrl } = getRandApprovedData();

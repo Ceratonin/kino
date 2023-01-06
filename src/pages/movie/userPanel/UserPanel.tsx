@@ -1,11 +1,9 @@
 import { useContext } from "react";
-import movieDataContext from "../../../contexts/movieDataContext";
+import movieDataContext from "contexts/movieDataContext";
 
 const UserPanel = () => {
-  const {
-    vote_average: voteAverage,
-    popularity,
-  } = useContext(movieDataContext);
+  const { vote_average: voteAverage, popularity } =
+    useContext(movieDataContext);
 
   return (
     <div className="user-panel__container panel-wrapper">

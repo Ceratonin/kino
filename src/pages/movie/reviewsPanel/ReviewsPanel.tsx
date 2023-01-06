@@ -1,7 +1,7 @@
-import { BASE_IMAGE_URL } from "../../../constants/baseUrl";
-import { TReviewsData } from "../../../types/movieData";
+import { BASE_IMAGE_URL } from "constants/baseUrl";
+import { TReviewsData } from "types/movieData";
 
-const fallback = require("../../../assets/images/blank_profile.jpg");
+const fallback = require("assets/images/blank_profile.jpg");
 
 const ReviewsPanel = ({ reviews }: TReviewsData) => {
   const getAvatarPath = (num: number) => {

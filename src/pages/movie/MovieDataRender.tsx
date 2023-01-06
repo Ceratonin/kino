@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import movieDataContext from "../../contexts/movieDataContext";
-import MovieCard from "../../components/movieCard/MovieCard";
+import movieDataContext from "contexts/movieDataContext";
+import MovieCard from "components/movieCard/MovieCard";
 import ActorsPanel from "./actorsPanel/ActorsPanel";
 import DataPanel from "./dataPanel/DataPanel";
 import ImagesPanel from "./imagesPanel/ImagesPanel";

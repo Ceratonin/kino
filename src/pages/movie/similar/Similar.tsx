@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import MovieCard from "../../../components/movieCard/MovieCard";
-import movieDataContext from "../../../contexts/movieDataContext";
+import MovieCard from "components/movieCard/MovieCard";
+import movieDataContext from "contexts/movieDataContext";
 
 const Similar = () => {
   const { recommendations } = useContext(movieDataContext);

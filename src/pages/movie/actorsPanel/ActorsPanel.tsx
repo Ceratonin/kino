@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { BASE_IMAGE_URL } from "../../../constants/baseUrl";
-import movieDataContext from "../../../contexts/movieDataContext";
+import { BASE_IMAGE_URL } from "constants/baseUrl";
+import movieDataContext from "contexts/movieDataContext";
 
-const fallback = require("../../../assets/images/blank_profile.jpg");
+const fallback = require("assets/images/blank_profile.jpg");
 
 const ActorsPanel = () => {
   const { credits } = useContext(movieDataContext);

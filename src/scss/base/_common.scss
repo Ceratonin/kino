@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as *;
+@use "scss/abstracts/variables" as *;
 
 .panel-wrapper {
   border-radius: 0.3rem;
@@ -56,7 +56,6 @@ section {
 .container {
   color: #9ab;
   padding: 0;
-  
 
   @media (min-width: 768px) {
     max-width: 540px;

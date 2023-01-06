@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { BASE_IMAGE_URL } from "../../../constants/baseUrl";
-import movieDataContext from "../../../contexts/movieDataContext";
+import { BASE_IMAGE_URL } from "constants/baseUrl";
+import movieDataContext from "contexts/movieDataContext";
 
 const ImagesPanel = () => {
   const { images } = useContext(movieDataContext);

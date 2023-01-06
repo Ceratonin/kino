@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
+import { movieDataObj } from "constants/movieDataObj";
+import movieDataContext from "contexts/movieDataContext";
+import { getMovieData } from "services/getMovieData";
 import Backdrop from "./backdrop/Backdrop";
 import ReviewsPanel from "./reviewsPanel/ReviewsPanel";
-import { movieDataObj } from "../../constants/movieDataObj";
-import { getMovieData } from "../../services/getMovieData";
-import movieDataContext from "../../contexts/movieDataContext";
 import MovieDataRender from "./MovieDataRender";
 
 const Movie = () => {

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { getPopularMovies } from "../../services/getPopularMovies";
-import { TMovieList } from "../../types/movieData";
-import MovieCard from "../movieCard/MovieCard";
-import MovieCardSkeleton from "../movieCard/MovieCardSkeleton";
+import { getPopularMovies } from "services/getPopularMovies";
+import { TMovieList } from "types/movieData";
+import MovieCard from "components/movieCard/MovieCard";
+import MovieCardSkeleton from "components/movieCard/MovieCardSkeleton";
 
 const MovieList = () => {
   const [popularMoviesArray, setPopularMoviesArray] = useState([]);

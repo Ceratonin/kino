@@ -1,6 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { BASE_IMAGE_URL } from "../../constants/baseUrl";
+import { BASE_IMAGE_URL } from "constants/baseUrl";
 
 interface IMovieCard {
   posterUrl: string;

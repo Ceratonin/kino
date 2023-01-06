@@ -1,5 +1,5 @@
-import Dropdown from "../dropdown/Dropdown";
-import { filterValues, sortValues } from "../../constants/dropdownValues";
+import Dropdown from "components/dropdown/Dropdown";
+import { filterValues, sortValues } from "constants/dropdownValues";
 
 const Filter = () => {
   return (
@@ -20,7 +20,7 @@ const Filter = () => {
             Most Popular First
           </Dropdown>
         </section>
-        
+
         <section className="filter__search">
           <input type="text" placeholder="Find a movie" />
         </section>

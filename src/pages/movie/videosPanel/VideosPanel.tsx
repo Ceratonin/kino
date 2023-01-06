@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import movieDataContext from "../../../contexts/movieDataContext";
+import movieDataContext from "contexts/movieDataContext";
 
 const VideosPanel = () => {
   const { videos } = useContext(movieDataContext);

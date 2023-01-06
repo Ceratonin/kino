@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
-import Dropdown from "../dropdown/Dropdown";
-import { headerProfileValues } from "../../constants/dropdownValues";
+import Dropdown from "components/dropdown/Dropdown";
+import { headerProfileValues } from "constants/dropdownValues";
 
 const Navbar = () => {
   const [logged, setLogged] = useState(false);
