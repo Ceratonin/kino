@@ -1,29 +1,27 @@
-.movie_header {
-  display: inline;
+.movie-page__header {
   margin-left: 1rem;
   grid-column: 5/17;
   grid-row: 1/2;
   display: flex;
   height: fit-content;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin-bottom: -5px;
+  white-space: nowrap;
 
-  .movie_title {
-    line-height: 100%;
+  .movie-page__title {
+    line-height: 90%;
     text-shadow: #000 2px 0 5px;
     font-family: "Roboto", sans-serif;
     color: white;
     font-size: 3rem;
-
-    &.text-small {
-      font-size: 2rem;
-    }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 0.5rem;
   }
 
-  .side_info {
+  .movie-page__side-info {
     display: flex;
     flex-direction: row;
-    white-space: nowrap;
     font-size: 1rem;
     align-items: end;
 
@@ -31,10 +29,20 @@
       margin-left: 1rem;
     }
 
-    .movie_shot_by {
+    .movie-page__shot-by {
       display: flex;
       flex-direction: row;
       margin-left: 5rem;
+    }
+  }
+
+  .movie-page__original-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.text-small {
+      font-size: 0.8rem;
+      padding-bottom: 0.05rem;
     }
   }
 }

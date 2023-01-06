@@ -11,8 +11,11 @@
     font-family: "Open Sans";
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(21, 1fr);
+    // grid-template-rows: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 69px);
     width: 100%;
+    overflow: hidden;
+
 
     .movie-page__poster {
       grid-column: 1/5;
