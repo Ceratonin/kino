@@ -9,9 +9,11 @@ const Similar = () => {
     <div className="similar-panel">
       <p>Similar Movies:</p>
       <div
-        className={`panel-wrapper ${!recommendations.results.length && "err"}`}
+        className={`panel-wrapper ${
+          recommendations && recommendations.results.length ? "" : "err"
+        }`}
       >
-        {recommendations.results.length ? (
+        {recommendations && recommendations.results.length ? (
           recommendations.results
             .splice(0, 5)
             .map((res, key) => (

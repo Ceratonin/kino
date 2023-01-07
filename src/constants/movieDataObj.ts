@@ -44,8 +44,9 @@ export const movieDataObj = {
   },
 
   original_language: "",
+  spoken_languages: [{ english_name: "", iso_639_1: "", name: "" }],
 
-  recommendations: { results: [{ title: "", poster_path: "", id:"" }] },
+  recommendations: { results: [{ title: "", poster_path: "", id: "" }] },
   media_type: "",
   popularity: "", // -1
   vote_count: "", // -1
