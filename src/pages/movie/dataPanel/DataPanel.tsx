@@ -10,6 +10,7 @@ const DataPanel = () => {
     revenue,
     original_language: originalLanguage,
     genres,
+    spoken_languages: spokenLanguages,
   } = useContext(movieDataContext);
 
   const toHours = () => {
@@ -19,11 +20,28 @@ const DataPanel = () => {
   };
 
   const parseDate = () => {
-    return new Date(releaseDate).toDateString();
+    const dateArr = new Date(releaseDate)
+      .toLocaleString("en-us", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      })
+      .split(" ");
+
+    return `${`${dateArr[1].split(",")[0]} ${dateArr[0]} ${dateArr[2]}`}`;
   };
 
   const parseMoney = (amount: number) => {
     return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
+  const parseOriginalLanguage = () => {
+    let fullLanguage = "No Information";
+    for (let i = 0; i < spokenLanguages.length; i += 1) {
+      if (originalLanguage === spokenLanguages[i].iso_639_1)
+        fullLanguage = spokenLanguages[i].english_name;
+    }
+    return fullLanguage;
   };
 
   const movieInfoArr = new Map<
@@ -35,7 +53,7 @@ const DataPanel = () => {
     ["ReleaseDate", releaseDate && parseDate()],
     ["Budget", budget && `$${parseMoney(budget)}`],
     ["Revenue", revenue && `$${parseMoney(revenue)}`],
-    ["OriginalLangueage", originalLanguage],
+    ["OriginalLangueage", parseOriginalLanguage()],
     ["Genres", genres],
   ]);
 

@@ -12,6 +12,7 @@ const MovieHeader = () => {
 
   const titleElement = document.querySelector("#title") as HTMLElement;
 
+  // Need some optimisation
   useEffect(() => {
     let titleFontSize = 3;
     if (title) {
