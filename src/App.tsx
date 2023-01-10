@@ -2,9 +2,9 @@ import "./scss/vendors/bootstrap.scss";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "./scss/main.scss";
 import { Routes, Route } from "react-router-dom";
-import Main from "./pages/main/Main";
-import Films from "./pages/films/Films";
-import Movie from "./pages/movie/Movie";
+import Main from "./pages/main/MainPage";
+import Films from "./pages/films/FilmsPage";
+import Movie from "./pages/movie/MoviePage";
 import ErrorPage from "./pages/error/ErrorPage";
 import Header from "./components/header/Header";
 

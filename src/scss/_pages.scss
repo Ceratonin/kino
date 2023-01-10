@@ -1,7 +1,7 @@
-@use "pages/films/films";
-@use "pages/main/main";
+@use "pages/films/filmsPage";
+@use "pages/main/mainPage";
 
-@use "pages/movie/movie";
+@use "pages/movie/moviePage";
 @use "pages/movie/backdrop/backdrop";
 @use "pages/movie/userPanel/userPanel";
 @use "pages/movie/dataPanel/dataPanel";
