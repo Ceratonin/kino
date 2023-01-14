@@ -2,8 +2,9 @@
 @use "components/header/navbar";
 
 @use "components/filter/filter";
+@use "components/checkButtonGroup/checkButtonGroup";
 
 @use "components/dropdown/dropdown";
 
 @use "components/movieCard/movieCard";
-@use "components/movieList/movieList"
+@use "components/movieList/movieList";

@@ -6,7 +6,7 @@ const Filter = () => {
     <div className="container">
       <section className="filter">
         <p>Filter movies:</p>
-        <div className="btn-group ">
+        <div className="btn-group filter__btn-group">
           {[...filterValues.keys()].map((btn) => (
             <Dropdown key={btn} items={filterValues.get(btn)!} saveTitle>
               {btn}

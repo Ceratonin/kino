@@ -5,7 +5,7 @@
   font-weight: 500;
   height: fit-content;
   width: 100%;
-  padding-top: 2rem;
+  padding: 2rem 0;
 
   p {
     display: flex;
@@ -14,13 +14,7 @@
   }
 }
 
-.btn-group {
-  border: 2px solid $gray;
-  border-radius: 0.3rem;
-  height: fit-content;
-  background-color: transparent;
-  color: $gray;
-
+.filter__btn-group {
   .dropdown {
     border-right: 2px solid $gray;
 

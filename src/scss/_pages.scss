@@ -12,4 +12,9 @@
 @use "pages/movie/similar/similar";
 @use "pages/movie/reviewsPanel/reviewsPanel";
 
+@use "pages/search/searchPage";
+@use "pages/search/foundMovie/foundMovie";
+@use "pages/search/foundPerson/foundPerson";
+@use "pages/search/foundTvShow/foundTvShow";
+
 @use "pages/error/errorPage";

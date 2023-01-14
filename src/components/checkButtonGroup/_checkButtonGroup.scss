@@ -1,0 +1,25 @@
+@use "scss/abstracts/variables" as *;
+
+.btn_modified {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: $gray;
+  border-right: 2px solid $gray;
+  height: fit-content;
+  padding: 0;
+  padding: 1px 6px;
+
+  &:checked {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+    background-color: crimson;
+  }
+
+  &:hover {
+    color: white;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+}

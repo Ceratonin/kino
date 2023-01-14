@@ -2,9 +2,9 @@ import "./scss/vendors/bootstrap.scss";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "./scss/main.scss";
 import { Routes, Route } from "react-router-dom";
-import Main from "./pages/main/MainPage";
-import Films from "./pages/films/FilmsPage";
-import Movie from "./pages/movie/MoviePage";
+import SearchPage from "pages/search/SearchPage";
+import FilmsPage from "./pages/films/FilmsPage";
+import MoviePage from "./pages/movie/MoviePage";
 import ErrorPage from "./pages/error/ErrorPage";
 import Header from "./components/header/Header";
 
@@ -14,9 +14,10 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/home" element={<Films />} />
-        <Route path="/" element={<Films />} />
-        <Route path="movie/:id" element={<Movie />} />
+        <Route path="/home" element={<FilmsPage />} />
+        <Route path="/" element={<FilmsPage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="movie/:id" element={<MoviePage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
